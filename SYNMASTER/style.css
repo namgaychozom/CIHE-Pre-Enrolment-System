@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-bottom: 150px;
+}
+
+header {
+    background-color:rgb(19,20,87);
+    color: white;
+    padding: 10px;
+    text-align:left;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+text-align:left-corner;
+}
+nav ul li {
+    display: inline;
+    padding: 10px;
+text-align:right;
+
+}
+ul li a{
+    color: #f1efef;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 19px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+form{
+    margin: 100px 50px;
+}
+main{
+padding: 20px;
+}
+
+#introduction {
+    margin-bottom: 20px;
+text-align: left;
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.box img{
+    height: 200px;
+    width: 400px;
+}
+.box h2{
+    font-size: 20px;
+}
+/* mouse over link */
+a:hover {
+    color: red;
+  }
+#footer {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+/*style for registration page */
+
+#registration-page {
+
+    h1{text-align:center;}
+    
+input[type=text], select {
+    
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #0f0101;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  }
+  
+ 
+
+/*style for search page */
+
+#search-page {
+
+        h1{text-align:center;}
+        input[type=text], select {
+            width: 98%;
+            padding: 12px 20px;
+            margin: 8px 8px;
+            display: inline-block;
+            border: 1px solid #150101;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+    }
+
+     
+     /*style for add car page*/
+    #addcar-page   
+h1{text-align:center;}
+input[type=text], select {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid hsla(0, 100%, 2%, 0.811);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+ 
+
+/*style for login page*/ 
+ #login-page
+
+h1{text-align:center;}
+input[type=text], select {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #150101;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+ 
+ 
+
+  /* style for about us page*/
+  .map-container {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+    
+}
+
+iframe {
+    width: 50%;  
+    height: 300px;  
+    border: none;
+    align-items:left;
+}
+
+
+/*style for all buttons*/
+#my-button {
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgb(19, 20, 87); /* Default background color */
+    color: rgb(17, 12, 12);      /* Text color */
+    width: 98%;              
+    padding: 15px 30px;        
+    border: none;              
+    border-radius: 60px;       
+    cursor: pointer;           
+}
+
+/* Change background color on hover */
+#my-button:hover {
+    background-color:lightblue; /* New background color on hover */
+}
+
+  
+
+
+
+
+
