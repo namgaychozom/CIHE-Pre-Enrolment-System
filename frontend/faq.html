@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - Crown Institute of Higher Education</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+    }
+    aside {
+      width: 200px;
+      background: #fff;
+      padding: 1em;
+      border-right: 1px solid #ccc;
+    }
+    aside nav a {
+      display: block;
+      margin: 1em 0;
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    aside button {
+      margin-top: 2em;
+      padding: 0.5em;
+      width: 100%;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    main {
+      flex: 1;
+      padding: 2em;
+      background: #fff;
+    }
+    h2 {
+      color: #003366;
+    }
+    .faq-item {
+      margin: 1em 0;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .faq-item:hover {
+      background: #eef;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em;
+    }
+    .contact-form {
+      margin-top: 2em;
+    }
+    .contact-form label {
+      display: block;
+      margin: 1em 0 0.5em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form .buttons {
+      margin-top: 1em;
+    }
+    .contact-form button {
+      padding: 0.7em 1.5em;
+      margin-right: 1em;
+      border: none;
+      border-radius: 4px;
+      background: #003366;
+      color: white;
+      cursor: pointer;
+    }
+    .contact-form button[type="reset"] {
+      background: #aaa;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      padding: 2em;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    footer div {
+      margin: 1em 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      display: block;
+      margin: 0.3em 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CROWN INSTITUTE OF HIGHER EDUCATION</h1>
+  </header>
+
+  <div class="container">
+    <aside>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Pre-Enrollment</a>
+        <a href="#">Notification</a>
+        <a href="#">Profile</a>
+        <a href="#" style="color: #000; font-weight: bold;">FAQ</a>
+      </nav>
+      <button>Logout</button>
+    </aside>
+
+    <main>
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I enroll in a course?</span>
+
+          <span>▼</span>
+          <ul class="faq-answer" style="display: none;">
+            <li>Visit the course selection page.</li>
+            <li>Select the courses you wish to enrol in.</li>
+            <li>Submit your selections for approval.</li>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I submit my assignments?</span>
+          <span>▼</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How can I check my class timetable?</span>
+          <span>▼</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What should I do if I forgot my password?</span>
+          <span>▼</span>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Where can I view my grades and feedback?</span>
+          <span>▼</span>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Please Contact Us</h2>
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" value=" " />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" value=" " />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="6"> </textarea>
+
+          <div class="buttons">
+            <button type="reset">Reset Form</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <h3>Essential Links</h3>
+      <a href="#">Privacy Policy / Terms of Service</a>
+      <a href="#">FAQ / Contact Support</a>
+    </div>
+    <div>
+      <h3>Contact Information</h3>
+      <p>Support Email: info@cihe.edu.au</p>
+      <p>Helpdesk Phone: +61 0299554088</p>
+      <p>Campus Address: 116 Pacific Highway, North Sydney, NSW, 2060, Australia</p>
+    </div>
+  </footer>
+</body>
+</html>

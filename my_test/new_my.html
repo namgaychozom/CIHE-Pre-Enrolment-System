@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6f9;
+  }
+
+  /* Top Navbar */
+  .top-nav {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 14px;
+  }
+  .top-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .top-nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Layout */
+  .main {
+    display: flex;
+    height: calc(100vh - 50px);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background-color: #002b5c;
+    width: 220px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sidebar a {
+    color: white;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  .sidebar a:hover {
+    background-color: #004080;
+  }
+
+  /* Content Area */
+  .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .page {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .page.active {
+    display: block;
+  }
+
+  /* Steps in Pre-Enrollment */
+  .steps {
+    margin-bottom: 20px;
+  }
+  .steps a {
+    margin-right: 15px;
+    text-decoration: underline;
+    color: #0056b3;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="top-nav">
+  <a href="#" onclick="showPage('home')">Home</a>
+  <a href="#" onclick="showPage('login')">Login</a>
+  <a href="#" onclick="showPage('reach')">Reach out to us</a>
+  <a href="#" onclick="showPage('about')">About</a>
+</div>
+
+<!-- Main Layout -->
+<div class="main">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#" onclick="showPage('dashboard')"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="#" onclick="showPage('preenrollment')"><i class="fas fa-file-alt"></i> Pre-Enrollment</a>
+    <a href="#" onclick="showPage('faq')"><i class="fas fa-question-circle"></i> FAQ</a>
+    <a href="#" onclick="showPage('notification')"><i class="fas fa-bell"></i> Notification</a>
+    <a href="#" onclick="showPage('profile')"><i class="fas fa-user"></i> Profile</a>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <div id="home" class="page active">
+      <h2>Welcome to the Home Page</h2>
+      <p>This is your student portal.</p>
+    </div>
+
+    <div id="login" class="page">
+      <h2>Login Page</h2>
+      <p>Enter your credentials to log in.</p>
+    </div>
+
+    <div id="reach" class="page">
+      <h2>Contact Us</h2>
+      <p>Email: support@example.com</p>
+    </div>
+
+    <div id="about" class="page">
+      <h2>About Us</h2>
+      <p>Information about the institution.</p>
+    </div>
+
+    <div id="dashboard" class="page">
+      <h2>Dashboard</h2>
+      <p>Overview of your activities.</p>
+    </div>
+
+    <div id="preenrollment" class="page">
+      <h2>Pre-Enrollment</h2>
+      <div class="steps">
+        <a onclick="showStep('personal')">Personal Information</a>
+        <a onclick="showStep('courses')">Course Selection</a>
+        <a onclick="showStep('review')">Review & Submit</a>
+      </div>
+      <div id="personal" class="step active">
+        <h3>Personal Information</h3>
+        <p>Form for personal info here.</p>
+      </div>
+      <div id="courses" class="step">
+        <h3>Course Selection</h3>
+        <p>Form for course selection here.</p>
+      </div>
+      <div id="review" class="step">
+        <h3>Review & Submit</h3>
+        <p>Final review before submission.</p>
+      </div>
+    </div>
+
+    <div id="faq" class="page">
+      <h2>FAQ</h2>
+      <p>Frequently asked questions.</p>
+    </div>
+
+    <div id="notification" class="page">
+      <h2>Notifications</h2>
+      <p>Your recent notifications will appear here.</p>
+    </div>
+
+    <div id="profile" class="page">
+      <h2>Profile</h2>
+      <p>Your profile details.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+  document.getElementById(pageId).classList.add('active');
+}
+
+function showStep(stepId) {
+  document.querySelectorAll('#preenrollment .step').forEach(step => {
+    step.classList.remove('active');
+  });
+  document.getElementById(stepId).classList.add('active');
+}
+</script>
+
+</body>
+</html>

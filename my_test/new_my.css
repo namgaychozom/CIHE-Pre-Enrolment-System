@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Top Navbar */
+.top-nav {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  font-size: 14px;
+}
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Layout */
+.main {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #002b5c;
+  width: 220px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar a {
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.sidebar a:hover {
+  background-color: #004080;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+.page {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+.page.active {
+  display: block;
+}
+
+/* Steps in Pre-Enrollment */
+.steps {
+  margin-bottom: 20px;
+}
+.steps a {
+  margin-right: 15px;
+  text-decoration: underline;
+  color: #0056b3;
+  cursor: pointer;
+  font-weight: bold;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
