@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #002147;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.date {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.notifications {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.notification {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #0055a5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.courses {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.course {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: #0055a5;
+  height: 100%;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+.links a {
+  margin-right: 15px;
+  color: #0055a5;
+  text-decoration: none;
+}
+
+.contact p {
+  margin: 5px 0;
+}
