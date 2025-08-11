@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Enrollment - Course Selection</title>
+    <link rel="stylesheet" href="./css/Pre-Enrolment.css">
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="/Assets/Logo.svg" alt="CIHE Logo">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-text-full"></div>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Login</a>
+                <a href="#" class="nav-item">Reach out to us</a>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="user-icon">👤</div>
+                <span class="user-name">Nima Selden</span>
+                <div class="dropdown-arrow">v</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-image">
+                    <img src="/Assets/Logo.svg" alt="CIHE Logo">
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">🏠</span>
+                    Dashboard
+                </a>
+                <a href="#" class="sidebar-item active">
+                    <span class="sidebar-icon">📝</span>
+                    Pre-Enrollment
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">🔔</span>
+                    Notification
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">👤</span>
+                    Profile
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">❓</span>
+                    FAQ
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="logout-btn">
+                    <span class="logout-icon">↩</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <section class="content">
+            <div class="page-header">
+                <div class="page-title">
+                    <span class="graduation-cap">🎓</span>
+                    <h1>Student Dashboard</h1>
+                </div>
+                
+                <div class="info-banner">
+                    <div class="info-icon">ℹ️</div>
+                    <p>Make sure to select courses that fulfill your degree requirements</p>
+                </div>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Personal Information</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Course Selection</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Review & Submit</div>
+                </div>
+            </div>
+
+            <!-- Course Selection Section -->
+            <div class="form-section">
+                <h2>Select Your Courses</h2>
+                
+                <div class="selection-guidelines">
+                    <div class="guideline-icon">ℹ️</div>
+                    <div class="guideline-content">
+                        <h3>Course Selection Guidelines</h3>
+                        <ul>
+                            <li>Fulfill your degree requirements</li>
+                            <li>Do not have overlapping schedules</li>
+                            <li>Include prerequisites if needed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Suggested Courses -->
+                <div class="suggested-courses">
+                    <div class="section-header">
+                        <span class="star-icon">⭐</span>
+                        <h3>Suggested Courses for Bachelors of Information Technology - Semester 1</h3>
+                    </div>
+                    
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-info">
+                                <h4>ICT104 : Fundamentals of Computability</h4>
+                                <p>2 credits | Tue/Thu 8:15am - 11:15am</p>
+                                <p class="prerequisite">Prerequisite : ICT103</p>
+                            </div>
+                            <div class="course-select">
+                                <input type="checkbox" id="course1">
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-info">
+                                <h4>ICT104 : Fundamentals of Computability</h4>
+                                <p>2 credits | Tue/Thu 8:15am - 11:15am</p>
+                            </div>
+                            <div class="course-select">
+                                <input type="checkbox" id="course2">
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-info">
+                                <h4>ICT104 : Fundamentals of Computability</h4>
+                                <p>2 credits | Tue/Thu 8:15am - 11:15am</p>
+                            </div>
+                            <div class="course-select">
+                                <input type="checkbox" id="course3">
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-info">
+                                <h4>ICT104 : Fundamentals of Computability</h4>
+                                <p>2 credits | Tue/Thu 8:15am - 11:15am</p>
+                            </div>
+                            <div class="course-select">
+                                <input type="checkbox" id="course4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search and Table -->
+                <div class="course-search">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search courses by name or code...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+
+                <div class="course-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Unit Code</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Schedule</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="table-course1">
+                                    <span class="course-code">ICT208</span>
+                                    <span class="suggested-badge">Suggested</span>
+                                </td>
+                                <td>
+                                    <div class="course-details">
+                                        <div class="course-name">Fundamentals of Computability</div>
+                                        <div class="prerequisite">Prerequisite : ICT103</div>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                                <td>Tue/Thu 8:15am - 11:15am</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="table-course2">
+                                    <span class="course-code">ICT208</span>
+                                    <span class="suggested-badge">Suggested</span>
+                                </td>
+                                <td>
+                                    <div class="course-details">
+                                        <div class="course-name">Fundamentals of Computability</div>
+                                        <div class="prerequisite">Prerequisite : ICT103</div>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                                <td>Tue/Thu 8:15am - 11:15am</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="table-course3">
+                                    <span class="course-code">ICT208</span>
+                                    <span class="suggested-badge">Suggested</span>
+                                </td>
+                                <td>
+                                    <div class="course-details">
+                                        <div class="course-name">Fundamentals of Computability</div>
+                                        <div class="prerequisite">Prerequisite : ICT103</div>
+                                    </div>
+                                </td>
+                                <td>10</td>
+                                <td>Tue/Thu 8:15am - 11:15am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Essential Links</h3>
+                <a href="#">Privacy Policy | Terms of Service</a>
+                <a href="#">FAQ | Contact Support</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                <p>Campus Address: 116 Pacific Highway, North Sydney, NSW, 2060, Australia</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+            <div class="footer-logo"></div>
+        </div>
+    </footer>
+</body>
+</html>

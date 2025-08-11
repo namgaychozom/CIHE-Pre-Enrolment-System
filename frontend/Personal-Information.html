@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Enrollment - Personal Information</title>
+    <link rel="stylesheet" href="./css/Pre-Enrolment.css">
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-image"></div>
+                <div class="logo-text">
+                    <div class="crown-text">CROWN</div>
+                    <div class="institute-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Login</a>
+                <a href="#" class="nav-item">Reach out to us</a>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="user-icon">👤</div>
+                <span class="user-name">Nima Selden</span>
+                <div class="dropdown-arrow">▼</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-image"></div>
+                <div class="sidebar-logo-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">🏠</span>
+                    Dashboard
+                </a>
+                <a href="#" class="sidebar-item active">
+                    <span class="sidebar-icon">📝</span>
+                    Pre-Enrollment
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">🔔</span>
+                    Notification
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">👤</span>
+                    Profile
+                </a>
+                <a href="#" class="sidebar-item">
+                    <span class="sidebar-icon">❓</span>
+                    FAQ
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="logout-btn">
+                    <span class="logout-icon">↩</span>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <section class="content">
+            <div class="page-header">
+                <div class="page-title">
+                    <span class="graduation-cap">🎓</span>
+                    <h1>Student Dashboard</h1>
+                </div>
+                
+                <div class="info-banner">
+                    <div class="info-icon">ℹ️</div>
+                    <p>Make sure to select courses that fulfil your requirements.</p>
+                </div>
+            </div>
+
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Personal Information</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Course Selection</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Review & Submit</div>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Pre-Enrollment Form</h2>
+                
+                <form class="enrollment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Student ID</label>
+                            <input type="text" value="CIHE23084" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="Nima Selden" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label>Email</label>
+                        <input type="email" value="cihe23084@student.cihe.edu.au" readonly>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Courses</label>
+                            <input type="text" value="Project 1" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Academic Year</label>
+                            <select>
+                                <option>Semester 1, 2025</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="verification-notice">
+                        <div class="notice-icon">ℹ️</div>
+                        <div class="notice-content">
+                            <h3>Verify your information</h3>
+                            <p>Please make sure your personal information is correct before proceeding.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Essential Links</h3>
+                <a href="#">Privacy Policy | Terms of Service</a>
+                <a href="#">FAQ | Contact Support</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                <p>Campus Address: 116 Pacific Highway, North Sydney, NSW, 2060, Australia</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+            <div class="footer-logo"></div>
+        </div>
+    </footer>
+</body>
+</html>
