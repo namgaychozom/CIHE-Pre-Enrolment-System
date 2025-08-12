@@ -1,0 +1,747 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f2f2f3;
+    color: #000000;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 20px auto 0;
+    width: 1288px;
+    max-width: 95%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 39px;
+    height: 109px;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    width: 359px;
+}
+
+.logo-icon {
+    width: 158px;
+    padding: 0 19px;
+}
+
+.logo-image {
+    width: 124px;
+    height: 82px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23003366"/><circle cx="100" cy="100" r="50" fill="%23FFD700"/></svg>') no-repeat center;
+    background-size: cover;
+}
+
+.logo-text {
+    flex: 1;
+    padding: 10px;
+}
+
+.logo-text-image {
+    width: 100%;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50"><text x="10" y="30" font-family="Times New Roman" font-size="14" fill="%23003366">CROWN INSTITUTE OF HIGHER EDUCATION</text></svg>') no-repeat left center;
+    background-size: contain;
+}
+
+/* Navigation Styles */
+.nav {
+    display: flex;
+    gap: 57px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #1c3563;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0f1d3a;
+}
+
+/* User Profile Styles */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 24px;
+    height: 24px;
+}
+
+.user-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.32px;
+}
+
+.dropdown-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.dropdown-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 41px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 83px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 333px;
+    height: 735px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    gap: 47px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    width: 319px;
+    overflow: hidden;
+}
+
+.sidebar-logo-icon {
+    width: 103px;
+    height: 82px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23003366"/><circle cx="100" cy="100" r="50" fill="%23FFD700"/></svg>') no-repeat center;
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.sidebar-logo-text {
+    flex: 1;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50"><text x="10" y="30" font-family="Times New Roman" font-size="12" fill="%23003366">CROWN INSTITUTE</text></svg>') no-repeat left center;
+    background-size: contain;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 285px;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 34px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav-item:hover {
+    background-color: #f5f5f5;
+}
+
+.sidebar-nav-item.active {
+    background-color: #e3f2fd;
+}
+
+.sidebar-nav-item svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 24px 0;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.logout-btn span {
+    background-color: #28406c;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    width: 123px;
+    text-align: center;
+}
+
+.logout-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Page Title */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.graduation-cap {
+    width: 38px;
+    height: 35px;
+}
+
+.page-title h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.profile-header {
+    background-color: #28406c;
+    padding: 20px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-header h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-content {
+    display: flex;
+    padding: 13px 0;
+}
+
+.profile-image-container {
+    width: 312px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px 0;
+}
+
+.profile-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-form {
+    flex: 1;
+    padding: 0 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 20px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 13px 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: -0.36px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #28406c;
+}
+
+.input-container input[readonly] {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.password-icon {
+    position: absolute;
+    right: 23px;
+    width: 21px;
+    height: 22.505px;
+    pointer-events: none;
+}
+
+.password-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Profile Actions */
+.profile-actions {
+    padding: 18px 45px 18px 19px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 80px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 123px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', serif;
+}
+
+.btn-primary {
+    background-color: #28406c;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1f3454;
+}
+
+.btn-secondary {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #dc2626;
+}
+
+/* Divider Line */
+.divider-line {
+    height: 25px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background-color: #000000;
+    transform: translateY(-50%) rotate(0.2deg);
+}
+
+/* Footer */
+.footer {
+    background-color: #f2f2f3;
+    padding: 30px 80px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 38px;
+    letter-spacing: -0.32px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.32px;
+    margin-bottom: 38px;
+}
+
+.footer-link {
+    color: #0434be;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    color: #3b3a3a;
+    letter-spacing: -0.32px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    width: 359px;
+}
+
+.footer-logo-icon {
+    width: 124px;
+    height: 82px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23003366"/><circle cx="100" cy="100" r="50" fill="%23FFD700"/></svg>') no-repeat center;
+    background-size: cover;
+    margin-right: 19px;
+}
+
+.footer-logo-text {
+    flex: 1;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50"><text x="10" y="30" font-family="Times New Roman" font-size="10" fill="%23003366">CROWN INSTITUTE OF HIGHER EDUCATION</text></svg>') no-repeat left center;
+    background-size: contain;
+}
+
+/* Success Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.overlay-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 33px 49px 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color: #000000;
+}
+
+.close-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 19px 14px;
+    margin-bottom: -8px;
+}
+
+.success-icon svg {
+    width: 100px;
+    height: 94px;
+}
+
+.success-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 19px 6px;
+}
+
+.success-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    margin-bottom: -6px;
+}
+
+.success-text p {
+    font-size: 22px;
+    color: #000000;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .dashboard-container {
+        padding: 0 40px;
+    }
+    
+    .header {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dashboard-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sidebar-content {
+        flex-direction: row;
+        height: auto;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-nav {
+        flex-direction: row;
+        height: auto;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+    
+    .sidebar-footer {
+        margin-top: 0;
+        padding: 10px 0;
+    }
+    
+    .profile-content {
+        flex-direction: column;
+    }
+    
+    .profile-image-container {
+        width: 100%;
+    }
+    
+    .profile-form {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        width: 250px;
+        justify-content: center;
+    }
+    
+    .overlay-content {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px;
+    }
+    
+    .edit-actions {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .page-title h1 {
+        font-size: 32px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .sidebar-nav {
+        flex-direction: column;
+    }
+    
+    .success-text h2 {
+        font-size: 28px;
+    }
+    
+    .success-text p {
+        font-size: 18px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header, .sidebar, .footer, .overlay {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 0;
+    }
+    
+    .dashboard-container {
+        padding: 0;
+    }
+    
+    .content-area {
+        width: 100%;
+    }
+    
+    .profile-card {
+        break-inside: avoid;
+    }
+}

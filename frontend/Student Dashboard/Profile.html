@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Profile</title>
+    <link rel="stylesheet" href="../css/Admin-Profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-image"></div>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-text-image"></div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Login</a>
+                <a href="#" class="nav-link">Reach out to us</a>
+            </nav>
+            
+            <!-- User Profile -->
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z"/>
+                    </svg>
+                </div>
+                <span class="user-name">Nima Selden</span>
+                <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <!-- Logo in sidebar -->
+                    <div class="sidebar-logo">
+                        <div class="sidebar-logo-icon"></div>
+                        <div class="sidebar-logo-text"></div>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z"/>
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z"/>
+                            </svg>
+                            <span>Pre-Enrollment</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z"/>
+                            </svg>
+                            <span>Notification</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item active">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                            </svg>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 22.5L11.2 19H6C5.44772 19 5 18.5523 5 18V7.10256C5 6.55028 5.44772 6.10256 6 6.10256H22C22.5523 6.10256 23 6.55028 23 7.10256V18C23 18.5523 22.5523 19 22 19H16.8L14 22.5ZM15.8387 17H21V8.10256H7V17H11.2H12.1613L14 19.2984L15.8387 17ZM2 2H19V4H3V15H1V3C1 2.44772 1.44772 2 2 2Z"/>
+                            </svg>
+                            <span>FAQ</span>
+                        </a>
+                    </nav>
+                    
+                    <!-- Logout Button -->
+                    <div class="sidebar-footer">
+                        <button class="logout-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998H20.0009C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z"/>
+                            </svg>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <svg class="graduation-cap" viewBox="0 0 38 35" fill="currentColor">
+                        <path d="M6.33333 16.5277L0 13.125L19 2.91667L38 13.125V25.5208H34.8333V14.8264L31.6667 16.5277V26.2665L31.3142 26.6677C28.414 29.9686 23.9745 32.0833 19 32.0833C14.0254 32.0833 9.58596 29.9686 6.68583 26.6677L6.33333 26.2665V16.5277ZM9.5 18.2292V25.2171C11.8231 27.6412 15.2176 29.1667 19 29.1667C22.7824 29.1667 26.1769 27.6412 28.5 25.2171V18.2292L19 23.3333L9.5 18.2292ZM6.28468 13.125L19 19.9567L31.7153 13.125L19 6.29331L6.28468 13.125Z"/>
+                    </svg>
+                    <h1>Profile</h1>
+                </div>
+                
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <h2>Student Profile</h2>
+                    </div>
+                    
+                    <!-- Profile Content -->
+                    <div class="profile-content">
+                        <!-- Profile Image -->
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616c88b5e4d?w=400&h=400&fit=crop&crop=face" alt="Student Profile" />
+                            </div>
+                        </div>
+                        
+                        <!-- Profile Form -->
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <div class="input-container">
+                                    <input type="text" id="fullName" value="Nima Selden" readonly />
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="studentId">Student ID (non-editable)</label>
+                                <div class="input-container">
+                                    <input type="text" id="studentId" value="CIHE23084" readonly />
+                                    <div class="password-icon hidden">
+                                        <svg viewBox="0 0 21 23" fill="none">
+                                            <path d="M5.49663 10.2272V6.12621C5.49663 4.76666 6.02377 3.46278 6.96208 2.50143C7.9004 1.54008 9.17302 1 10.5 1C11.827 1 13.0996 1.54008 14.0379 2.50143C14.9762 3.46278 15.5034 4.76666 15.5034 6.12621V10.2272" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M17.5047 10.2272H3.49528C2.38996 10.2272 1.49393 11.1452 1.49393 12.2777V19.4544C1.49393 20.5868 2.38996 21.5049 3.49528 21.5049H17.5047C18.61 21.5049 19.5061 20.5868 19.5061 19.4544V12.2777C19.5061 11.1452 18.61 10.2272 17.5047 10.2272Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-container">
+                                    <input type="email" id="email" value="cihe23084@student.cihe.edu.au" readonly />
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courses">Courses</label>
+                                <div class="input-container">
+                                    <input type="text" id="courses" value="Project 1" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Actions -->
+                    <div class="profile-actions">
+                        <button id="editProfileBtn" class="btn btn-primary">Edit Profile</button>
+                        <div id="editActions" class="edit-actions hidden">
+                            <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                            <button id="saveBtn" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Divider Line -->
+    <div class="divider-line"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Essential Links</h4>
+                <a href="#" class="footer-link">Privacy Policy | Terms of Service</a>
+                <a href="#" class="footer-link">FAQ | Contact Support</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Support Email: <a href="mailto:info@cihe.edu.au" class="footer-link">info@cihe.edu.au</a></p>
+                <p>Helpdesk Phone: <a href="tel:0299550488" class="footer-link">+61 0299550488</a></p>
+                <p>Campus Address: <span class="footer-link">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+            <div class="footer-logo">
+                <div class="footer-logo-icon"></div>
+                <div class="footer-logo-text"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Overlay Modal -->
+    <div id="successOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <div class="overlay-header">
+                <button id="closeOverlay" class="close-btn">
+                    <svg viewBox="0 0 30 30" fill="currentColor">
+                        <path d="M15 30C6.71572 30 0 23.2842 0 15C0 6.71572 6.71572 0 15 0C23.2842 0 30 6.71572 30 15C30 23.2842 23.2842 30 15 30ZM15 27C21.6275 27 27 21.6275 27 15C27 8.37258 21.6275 3 15 3C8.37258 3 3 8.37258 3 15C3 21.6275 8.37258 27 15 27ZM15 12.8787L19.2426 8.63604L21.3639 10.7574L17.1213 15L21.3639 19.2426L19.2426 21.3639L15 17.1213L10.7574 21.3639L8.63604 19.2426L12.8787 15L8.63604 10.7574L10.7574 8.63604L15 12.8787Z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="success-icon">
+                <svg viewBox="0 0 100 94" fill="none">
+                    <path d="M16.6667 47C16.6667 29.6951 31.5905 15.6667 50 15.6667C68.4096 15.6667 83.3333 29.6951 83.3333 47C83.3333 64.305 68.4096 78.3333 50 78.3333C31.5905 78.3333 16.6667 64.305 16.6667 47ZM50 7.83333C26.9881 7.83333 8.33333 25.3688 8.33333 47C8.33333 68.631 26.9881 86.1667 50 86.1667C73.0117 86.1667 91.6667 68.631 91.6667 47C91.6667 25.3688 73.0117 7.83333 50 7.83333ZM72.7379 37.0403L66.8454 31.5013L45.8333 51.2527L34.1963 40.3139L28.3037 45.8528L45.8333 62.3306L72.7379 37.0403Z" fill="#22C55E"/>
+                </svg>
+            </div>
+            <div class="success-text">
+                <h2>Success!</h2>
+                <p>Profile Updated Successfully</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Edit Profile functionality
+        const editProfileBtn = document.getElementById('editProfileBtn');
+        const editActions = document.getElementById('editActions');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const successOverlay = document.getElementById('successOverlay');
+        const closeOverlay = document.getElementById('closeOverlay');
+        const passwordIcon = document.querySelector('.password-icon');
+        
+        const inputs = document.querySelectorAll('input:not(#studentId)');
+        
+        let originalValues = {};
+        
+        editProfileBtn.addEventListener('click', () => {
+            // Store original values
+            inputs.forEach(input => {
+                originalValues[input.id] = input.value;
+            });
+            
+            // Enable editing
+            inputs.forEach(input => {
+                input.removeAttribute('readonly');
+            });
+            
+            // Show/hide buttons
+            editProfileBtn.classList.add('hidden');
+            editActions.classList.remove('hidden');
+            passwordIcon.classList.remove('hidden');
+        });
+        
+        cancelBtn.addEventListener('click', () => {
+            // Restore original values
+            inputs.forEach(input => {
+                input.value = originalValues[input.id];
+                input.setAttribute('readonly', '');
+            });
+            
+            // Show/hide buttons
+            editProfileBtn.classList.remove('hidden');
+            editActions.classList.add('hidden');
+            passwordIcon.classList.add('hidden');
+        });
+        
+        saveBtn.addEventListener('click', () => {
+            // Save changes (in real app, this would make an API call)
+            inputs.forEach(input => {
+                input.setAttribute('readonly', '');
+            });
+            
+            // Show/hide buttons
+            editProfileBtn.classList.remove('hidden');
+            editActions.classList.add('hidden');
+            passwordIcon.classList.add('hidden');
+            
+            // Show success overlay
+            successOverlay.classList.remove('hidden');
+        });
+        
+        closeOverlay.addEventListener('click', () => {
+            successOverlay.classList.add('hidden');
+        });
+        
+        // Close overlay when clicking outside
+        successOverlay.addEventListener('click', (e) => {
+            if (e.target === successOverlay) {
+                successOverlay.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

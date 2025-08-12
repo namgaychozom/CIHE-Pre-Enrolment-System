@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coordinator Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/Coordinator.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <img class="crest" src="../images/logo.png" alt="Crown Institute crest">
+      <h1>Coordinator Dashboard</h1>
+    </div>
+
+    <form class="search">
+      <span class="icon" aria-hidden="true">🔍</span>
+      <input type="search" placeholder="filters students/units by ID/ name" aria-label="Filter students or units" />
+    </form>
+  </header>
+
+  <main class="wrap">
+    <!-- Left rail -->
+    <aside class="rail">
+      <div class="photo-card">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Coordinator profile">
+      </div>
+
+      <nav class="rail-nav">
+        <a href="#" class="link">Profile</a>
+        <a href="#" class="link logout">
+          <span class="arr" aria-hidden="true">↪</span> Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <section class="content">
+      <h2 class="section-title">Quick Stats</h2>
+
+      <div class="kpi-grid">
+        <article class="card">
+          <header class="card-head">
+            <h3>Total Applications</h3>
+            <div class="dot dot-blue">📄</div>
+          </header>
+          <div class="card-main">
+            <div class="value">1245</div>
+            <div class="delta up">+–12% from last week</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h3>Pending Review</h3>
+            <div class="dot dot-green">🕒</div>
+          </header>
+          <div class="card-main">
+            <div class="value">856</div>
+            <div class="delta up">+–8% from last week</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h3>Approved Enrolments</h3>
+            <div class="dot dot-purple">✔</div>
+          </header>
+          <div class="card-main">
+            <div class="value">48</div>
+            <div class="delta up">+–5% from yesterday</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <h3>Rejected Applications</h3>
+            <div class="dot dot-yellow">✖</div>
+          </header>
+          <div class="card-main">
+            <div class="value">89</div>
+            <div class="delta">3% of total</div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== Recent Applications ===== -->
+      <h3 class="section-heading">Recent Applications</h3>
+      <div class="panel">
+        <div class="table-scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Program</th>
+                <th>Status</th>
+                <th>When</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Namgay</td>
+                <td><a href="#" class="link-plain">Introduction to React</a></td>
+                <td><span class="chip chip-approve">Approved</span></td>
+                <td>2 hours ago</td>
+                <td><a class="action" href="#">View Details</a></td>
+              </tr>
+              <tr>
+                <td>Namgay</td>
+                <td><a href="#" class="link-plain">Advanced JavaScript</a></td>
+                <td><span class="chip chip-approve">Approved</span></td>
+                <td>1 day ago</td>
+                <td><a class="action" href="#">View Details</a></td>
+              </tr>
+              <tr>
+                <td>Namgay</td>
+                <td><a href="#" class="link-plain">UI/UX Design Principles</a></td>
+                <td><span class="chip chip-pending">Pending</span></td>
+                <td>2 days ago</td>
+                <td><a class="action" href="#">Approve/Reject</a></td>
+              </tr>
+              <tr>
+                <td>Namgay</td>
+                <td><a href="#" class="link-plain">Node.js Fundamentals</a></td>
+                <td><span class="chip chip-reject">Rejected</span></td>
+                <td>3 days ago</td>
+                <td><a class="action" href="#">View Details</a></td>
+              </tr>
+              <tr>
+                <td>NAMgay</td>
+                <td><a href="#" class="link-plain">Python for Data Science</a></td>
+                <td><span class="chip chip-approve">Approved</span></td>
+                <td>1 week ago</td>
+                <td><a class="action" href="#">View Details</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===== Popular Units ===== -->
+      <div class="panel">
+        <h3 class="panel-title">Popular Units</h3>
+        <div class="table-scroll">
+          <table class="table two-col">
+            <thead>
+              <tr>
+                <th>Units</th>
+                <th>Applications</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Introduction to IT</td><td>245</td></tr>
+              <tr><td>Advanced JavaScript</td><td>189</td></tr>
+              <tr><td>UI/UX Design Principles</td><td>132</td></tr>
+              <tr><td>Node.js Fundamentals</td><td>211</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===== Report Analysis (pure CSS bars) ===== -->
+      <div class="panel" id="report-panel">
+        <h3 class="panel-title">Report Analysis</h3>
+
+        <div class="chart-wrap">
+          <div class="chart-note">
+            <span class="legend l-over"></span> Over-enrolled
+            <span class="legend l-near"></span> Near Limit
+            <span class="legend l-safe"></span> Safe
+          </div>
+
+          <div class="bars">
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:96%"></span>
+                <span class="bar near" style="height:55%"></span>
+                <span class="bar safe" style="height:80%"></span>
+              </div>
+              <span class="label">Programming</span>
+            </div>
+
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:78%"></span>
+                <span class="bar near" style="height:30%"></span>
+                <span class="bar safe" style="height:28%"></span>
+              </div>
+              <span class="label">IT Ops</span>
+            </div>
+
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:80%"></span>
+                <span class="bar near" style="height:10%"></span>
+                <span class="bar safe" style="height:80%"></span>
+              </div>
+              <span class="label">Intro to IT</span>
+            </div>
+
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:98%"></span>
+                <span class="bar near" style="height:25%"></span>
+                <span class="bar safe" style="height:95%"></span>
+              </div>
+              <span class="label">Web</span>
+            </div>
+
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:90%"></span>
+                <span class="bar near" style="height:15%"></span>
+                <span class="bar safe" style="height:70%"></span>
+              </div>
+              <span class="label">Databases</span>
+            </div>
+
+            <div class="group">
+              <div class="group-bars">
+                <span class="bar over" style="height:65%"></span>
+                <span class="bar near" style="height:5%"></span>
+                <span class="bar safe" style="height:45%"></span>
+              </div>
+              <span class="label">Data Sci</span>
+            </div>
+          </div>
+
+          <div class="chart-actions">
+            <button class="btn-pdf" id="btn-pdf">Download PDF ⬇</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- libs: html2canvas + jsPDF -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script>
+    // Capture the Report Analysis panel and export to PDF (A4 Landscape)
+    document.getElementById('btn-pdf').addEventListener('click', async () => {
+      const { jsPDF } = window.jspdf;
+      const target = document.getElementById('report-panel');
+
+      // Ensure any horizontal scroll areas are fully in view
+      const bars = target.querySelector('.bars');
+      if (bars) bars.scrollLeft = 0;
+
+      // Hi-DPI canvas render for crisp PDF
+      const scale = Math.min(window.devicePixelRatio || 2, 3);
+      const canvas = await html2canvas(target, {
+        backgroundColor: '#ffffff',
+        scale,
+        useCORS: true,
+        logging: false,
+        windowWidth: document.documentElement.clientWidth
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'a4' });
+
+      const pageW = pdf.internal.pageSize.getWidth();
+      const pageH = pdf.internal.pageSize.getHeight();
+
+      // Fit image within page while preserving aspect
+      const imgW = canvas.width;
+      const imgH = canvas.height;
+      const ratio = Math.min(pageW / imgW, pageH / imgH);
+      const w = imgW * ratio;
+      const h = imgH * ratio;
+      const x = (pageW - w) / 2;
+      const y = (pageH - h) / 2;
+
+      pdf.addImage(imgData, 'PNG', x, y, w, h);
+      pdf.save('Report_Analysis.pdf');
+    });
+  </script>
+</body>
+</html>

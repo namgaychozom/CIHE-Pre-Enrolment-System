@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Notifications</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/Notifications.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-image"></div>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-text-image"></div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Login</a>
+                <a href="#" class="nav-link">Reach out to us</a>
+            </nav>
+            
+            <!-- User Profile -->
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z"/>
+                    </svg>
+                </div>
+                <span class="user-name">Nima Selden</span>
+                <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <!-- Logo in sidebar -->
+                    <div class="sidebar-logo">
+                        <div class="sidebar-logo-icon"></div>
+                        <div class="sidebar-logo-text"></div>
+                    </div>
+                    
+                    <!-- Navigation Menu -->
+                    <nav class="sidebar-nav">
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z"/>
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z"/>
+                            </svg>
+                            <span>Pre-Enrollment</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item active">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z"/>
+                            </svg>
+                            <span>Notification</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                            </svg>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="sidebar-nav-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 22.5L11.2 19H6C5.44772 19 5 18.5523 5 18V7.10256C5 6.55028 5.44772 6.10256 6 6.10256H22C22.5523 6.10256 23 6.55028 23 7.10256V18C23 18.5523 22.5523 19 22 19H16.8L14 22.5ZM15.8387 17H21V8.10256H7V17H11.2H12.1613L14 19.2984L15.8387 17ZM2 2H19V4H3V15H1V3C1 2.44772 1.44772 2 2 2Z"/>
+                            </svg>
+                            <span>FAQ</span>
+                        </a>
+                    </nav>
+                    
+                    <!-- Logout Button -->
+                    <div class="sidebar-footer">
+                        <button class="logout-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998H20.0009C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z"/>
+                            </svg>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Page Title -->
+                <div class="page-title">
+                    <svg class="graduation-cap" viewBox="0 0 38 35" fill="currentColor">
+                        <path d="M6.33333 16.5277L0 13.125L19 2.91667L38 13.125V25.5208H34.8333V14.8264L31.6667 16.5277V26.2665L31.3142 26.6677C28.414 29.9686 23.9745 32.0833 19 32.0833C14.0254 32.0833 9.58596 29.9686 6.68583 26.6677L6.33333 26.2665V16.5277ZM9.5 18.2292V25.2171C11.8231 27.6412 15.2176 29.1667 19 29.1667C22.7824 29.1667 26.1769 27.6412 28.5 25.2171V18.2292L19 23.3333L9.5 18.2292ZM6.28468 13.125L19 19.9567L31.7153 13.125L19 6.29331L6.28468 13.125Z"/>
+                    </svg>
+                    <h1>Notification</h1>
+                </div>
+                
+                <!-- Notification Tabs -->
+                <div class="notification-tabs">
+                    <button class="tab-btn active" data-tab="all">All Notifications</button>
+                    <button class="tab-btn" data-tab="unread">Unread</button>
+                    <button class="tab-btn" data-tab="latest">Latest</button>
+                </div>
+                
+                <!-- Notifications Content -->
+                <div class="notifications-content">
+                    <!-- All Notifications Tab -->
+                    <div id="all-tab" class="tab-content active">
+                        <div class="notification-item">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #8A3DA1;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V10.6973L17.0215 20.2076C17.1363 20.7479 17.6673 21.0927 18.2075 20.9779L21.142 20.3541C21.6822 20.2393 22.027 19.7083 21.9122 19.1681L19.0015 5.47402C18.8866 4.9338 18.3556 4.58896 17.8154 4.70378L15 5.30221V5C15 4.44772 14.5523 4 14 4H9C9 3.44772 8.55228 3 8 3H4ZM9 6H13V14H9V6ZM13 16V19H9V16H13ZM7 17V19H5V17H7ZM18.7699 18.8137L18.3541 16.8577L19.3323 16.6498L19.748 18.6058L18.7699 18.8137Z"/>
+                                </svg>
+                                <h3>Assignment Reminder</h3>
+                            </div>
+                            <p class="notification-text">Your BUS201 report is due this Sunday at 6 PM. Don't forget to submit it on Moodle!</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #AA5F5F;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 11H8V13H6V11ZM6 15H8V17H6V15ZM10 11H18V13H10V11ZM10 15H15V17H10V15Z"/>
+                                </svg>
+                                <h3>Class Reschedule</h3>
+                            </div>
+                            <p class="notification-text">Tomorrow's ICT307 lecture has been moved to Room 101 at 11:00 AM.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #00B800;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"/>
+                                </svg>
+                                <h3>Pre-Enrolment Confirmation</h3>
+                            </div>
+                            <p class="notification-text">You have successfully submitted your pre-enrolment form for Semester 2.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #DC2626;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM4.20568 19.0002H19.7941L11.9999 5.50017L4.20568 19.0002ZM10.9999 16.0002H12.9999V18.0002H10.9999V16.0002ZM10.9999 9.00017H12.9999V14.0002H10.9999V9.00017Z"/>
+                                </svg>
+                                <h3>Low Attendance Warning</h3>
+                            </div>
+                            <p class="notification-text">Your attendance in ICT306 is below 80%. Please contact your lecturer for assistance.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #2563EB;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 7.5C14 6.11929 15.1193 5 16.5 5S19 6.11929 19 7.5C19 8.88071 17.8807 10 16.5 10S14 8.88071 14 7.5ZM16.5 8C17.3284 8 18 7.32843 18 6.5C18 5.67157 17.3284 5 16.5 5C15.6716 5 15 5.67157 15 6.5C15 7.32843 15.6716 8 16.5 8ZM22 17.7C22 18.8598 21.0456 19.8142 19.8858 19.8142H13.1142C11.9544 19.8142 11 18.8598 11 17.7V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V17C21 17.5523 20.5523 18 20 18H12V19H20C20.5523 19 21 19.4477 21 20S20.5523 21 20 21H11V19C11 18.4477 11.4477 18 12 18H11V17C11 16.4477 11.4477 16 12 16H20V17H12V18H20V17C20 16.4477 20.4477 16 21 16V17.7C21 17.8598 20.9544 18 20.8858 18H13.1142C12.0456 18 11 17.0544 11 15.9142V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V15.9142C21 17.0544 20.0456 18 18.8858 18H19.8858C21.0456 18 22 17.0544 22 15.9142V17.7Z"/>
+                                </svg>
+                                <h3>New Announcement</h3>
+                            </div>
+                            <p class="notification-text">A new announcement has been posted in ICT313. Click here to view.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Unread Notifications Tab -->
+                    <div id="unread-tab" class="tab-content">
+                        <div class="notification-item unread">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #8A3DA1;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V10.6973L17.0215 20.2076C17.1363 20.7479 17.6673 21.0927 18.2075 20.9779L21.142 20.3541C21.6822 20.2393 22.027 19.7083 21.9122 19.1681L19.0015 5.47402C18.8866 4.9338 18.3556 4.58896 17.8154 4.70378L15 5.30221V5C15 4.44772 14.5523 4 14 4H9C9 3.44772 8.55228 3 8 3H4ZM9 6H13V14H9V6ZM13 16V19H9V16H13ZM7 17V19H5V17H7ZM18.7699 18.8137L18.3541 16.8577L19.3323 16.6498L19.748 18.6058L18.7699 18.8137Z"/>
+                                </svg>
+                                <h3>Assignment Reminder</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #AA5F5F;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 11H8V13H6V11ZM6 15H8V17H6V15ZM10 11H18V13H10V11ZM10 15H15V17H10V15Z"/>
+                                </svg>
+                                <h3>Class Reschedule</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #00B800;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"/>
+                                </svg>
+                                <h3>Pre-Enrolment Confirmation</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #DC2626;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM4.20568 19.0002H19.7941L11.9999 5.50017L4.20568 19.0002ZM10.9999 16.0002H12.9999V18.0002H10.9999V16.0002ZM10.9999 9.00017H12.9999V14.0002H10.9999V9.00017Z"/>
+                                </svg>
+                                <h3>Low Attendance Warning</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item unread">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #2563EB;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 7.5C14 6.11929 15.1193 5 16.5 5S19 6.11929 19 7.5C19 8.88071 17.8807 10 16.5 10S14 8.88071 14 7.5ZM16.5 8C17.3284 8 18 7.32843 18 6.5C18 5.67157 17.3284 5 16.5 5C15.6716 5 15 5.67157 15 6.5C15 7.32843 15.6716 8 16.5 8ZM22 17.7C22 18.8598 21.0456 19.8142 19.8858 19.8142H13.1142C11.9544 19.8142 11 18.8598 11 17.7V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V17C21 17.5523 20.5523 18 20 18H12V19H20C20.5523 19 21 19.4477 21 20S20.5523 21 20 21H11V19C11 18.4477 11.4477 18 12 18H11V17C11 16.4477 11.4477 16 12 16H20V17H12V18H20V17C20 16.4477 20.4477 16 21 16V17.7C21 17.8598 20.9544 18 20.8858 18H13.1142C12.0456 18 11 17.0544 11 15.9142V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V15.9142C21 17.0544 20.0456 18 18.8858 18H19.8858C21.0456 18 22 17.0544 22 15.9142V17.7Z"/>
+                                </svg>
+                                <h3>New Announcement</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Latest Notifications Tab -->
+                    <div id="latest-tab" class="tab-content">
+                        <div class="notification-item latest">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #8A3DA1;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V10.6973L17.0215 20.2076C17.1363 20.7479 17.6673 21.0927 18.2075 20.9779L21.142 20.3541C21.6822 20.2393 22.027 19.7083 21.9122 19.1681L19.0015 5.47402C18.8866 4.9338 18.3556 4.58896 17.8154 4.70378L15 5.30221V5C15 4.44772 14.5523 4 14 4H9C9 3.44772 8.55228 3 8 3H4ZM9 6H13V14H9V6ZM13 16V19H9V16H13ZM7 17V19H5V17H7ZM18.7699 18.8137L18.3541 16.8577L19.3323 16.6498L19.748 18.6058L18.7699 18.8137Z"/>
+                                </svg>
+                                <h3>Assignment Reminder</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item latest">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #AA5F5F;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 11H8V13H6V11ZM6 15H8V17H6V15ZM10 11H18V13H10V11ZM10 15H15V17H10V15Z"/>
+                                </svg>
+                                <h3>Class Reschedule</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item latest">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #00B800;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"/>
+                                </svg>
+                                <h3>Pre-Enrolment Confirmation</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item latest">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #DC2626;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM4.20568 19.0002H19.7941L11.9999 5.50017L4.20568 19.0002ZM10.9999 16.0002H12.9999V18.0002H10.9999V16.0002ZM10.9999 9.00017H12.9999V14.0002H10.9999V9.00017Z"/>
+                                </svg>
+                                <h3>Low Attendance Warning</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item latest">
+                            <div class="notification-header">
+                                <svg class="notification-icon" style="color: #2563EB;" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 7.5C14 6.11929 15.1193 5 16.5 5S19 6.11929 19 7.5C19 8.88071 17.8807 10 16.5 10S14 8.88071 14 7.5ZM16.5 8C17.3284 8 18 7.32843 18 6.5C18 5.67157 17.3284 5 16.5 5C15.6716 5 15 5.67157 15 6.5C15 7.32843 15.6716 8 16.5 8ZM22 17.7C22 18.8598 21.0456 19.8142 19.8858 19.8142H13.1142C11.9544 19.8142 11 18.8598 11 17.7V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V17C21 17.5523 20.5523 18 20 18H12V19H20C20.5523 19 21 19.4477 21 20S20.5523 21 20 21H11V19C11 18.4477 11.4477 18 12 18H11V17C11 16.4477 11.4477 16 12 16H20V17H12V18H20V17C20 16.4477 20.4477 16 21 16V17.7C21 17.8598 20.9544 18 20.8858 18H13.1142C12.0456 18 11 17.0544 11 15.9142V15C11 14.4477 11.4477 14 12 14H20C20.5523 14 21 14.4477 21 15V15.9142C21 17.0544 20.0456 18 18.8858 18H19.8858C21.0456 18 22 17.0544 22 15.9142V17.7Z"/>
+                                </svg>
+                                <h3>New Announcement</h3>
+                            </div>
+                            <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="notification-time">
+                                <span>Date: May 23, 2025</span><br>
+                                <span>Time: 12:15 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Divider Line -->
+    <div class="divider-line"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Essential Links</h4>
+                <a href="#" class="footer-link">Privacy Policy | Terms of Service</a>
+                <a href="#" class="footer-link">FAQ | Contact Support</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Support Email: <a href="mailto:info@cihe.edu.au" class="footer-link">info@cihe.edu.au</a></p>
+                <p>Helpdesk Phone: <a href="tel:0299550488" class="footer-link">+61 0299550488</a></p>
+                <p>Campus Address: <span class="footer-link">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+            <div class="footer-logo">
+                <div class="footer-logo-icon"></div>
+                <div class="footer-logo-text"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.dataset.tab;
+                
+                // Remove active class from all tabs
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                btn.classList.add('active');
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
