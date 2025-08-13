@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-    <link rel="stylesheet" href="/frontend/css/Style.css">
+    
     <link rel="stylesheet" href="../css/StudentDashboard.css">
 
 </head>
@@ -42,184 +42,174 @@
         </header>
         </div>
 
+         <!-- Main Content Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo Placeholder -->
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-img"><img src="/Assets/Logo.svg" alt="CIHE Logo"></div>
+                
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-item active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z" fill="black"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z" fill="black"/>
+                    </svg>
+                    <span>Pre-Enrollment</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z" fill="black"/>
+                    </svg>
+                    <span>Notification</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="black"/>
+                    </svg>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M14 22.5L11.2 19H6C5.44772 19 5 18.5523 5 18V7.10256C5 6.55028 5.44772 6.10256 6 6.10256H22C22.5523 6.10256 23 6.55028 23 7.10256V18C23 18.5523 22.5523 19 22 19H16.8L14 22.5ZM15.8387 17H21V8.10256H7V17H11.2H12.1613L14 19.2984L15.8387 17ZM2 2H19V4H3V15H1V3C1 2.44772 1.44772 2 2 2Z" fill="black"/>
+                    </svg>
+                    <span>FAQ</span>
+                </a>
+            </nav>
+
+            <!-- Logout Button -->
+            <div class="logout-section">
+                <div class="logout-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998H20.0009C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z" fill="black"/>
+                    </svg>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </aside>
+
         <!-- Main Content -->
-        <div class="main-container"></div>
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <!-- Sidebar Logo -->
-                <div class="sidebar-logo">
-                    <div class="logo-part-1">
-                        <img src="/Assets/Logo.svg" alt="CIHE Logo">
+        <main class="main-content">
+            <!-- Page Title -->
+            <div class="page-title">
+                <svg width="38" height="35" viewBox="0 0 38 35" fill="none">
+                    <path d="M6.33333 16.5277L0 13.125L19 2.91667L38 13.125V25.5208H34.8333V14.8264L31.6667 16.5277V26.2665L31.3142 26.6677C28.414 29.9686 23.9745 32.0833 19 32.0833C14.0254 32.0833 9.58596 29.9686 6.68583 26.6677L6.33333 26.2665V16.5277ZM9.5 18.2292V25.2171C11.8231 27.6412 15.2176 29.1667 19 29.1667C22.7824 29.1667 26.1769 27.6412 28.5 25.2171V18.2292L19 23.3333L9.5 18.2292ZM6.28468 13.125L19 19.9567L31.7153 13.125L19 6.29331L6.28468 13.125Z" fill="black"/>
+                </svg>
+                <h1>Student Dashboard</h1>
+            </div>
+
+            <!-- Alert Notifications -->
+            <div class="alert-section">
+                <div class="alert alert-info">
+                    <div class="alert-content">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#1D4ED8"/>
+                        </svg>
+                        <span>Pre-enrollment is now open for the Fall semester</span>
+                    </div>
+                    <button class="alert-close">
+                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <path d="M11 20C4.92487 20 0 15.5228 0 10C0 4.47715 4.92487 0 11 0C17.0751 0 22 4.47715 22 10C22 15.5228 17.0751 20 11 20ZM11 18C15.8601 18 19.8 14.4183 19.8 10C19.8 5.58172 15.8601 2 11 2C6.13989 2 2.2 5.58172 2.2 10C2.2 14.4183 6.13989 18 11 18ZM11 8.5858L14.1112 5.75736L15.6669 7.17157L12.5556 10L15.6669 12.8284L14.1112 14.2426L11 11.4142L7.88873 14.2426L6.3331 12.8284L9.44438 10L6.3331 7.17157L7.88873 5.75736L11 8.5858Z" fill="black"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="alert alert-warning">
+                    <div class="alert-content">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#B45309"/>
+                        </svg>
+                        <span>Your financial aid application needs attention</span>
+                    </div>
+                    <button class="alert-close">
+                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <path d="M11 20C4.92487 20 0 15.5228 0 10C0 4.47715 4.92487 0 11 0C17.0751 0 22 4.47715 22 10C22 15.5228 17.0751 20 11 20ZM11 18C15.8601 18 19.8 14.4183 19.8 10C19.8 5.58172 15.8601 2 11 2C6.13989 2 2.2 5.58172 2.2 10C2.2 14.4183 6.13989 18 11 18ZM11 8.5858L14.1112 5.75736L15.6669 7.17157L12.5556 10L15.6669 12.8284L14.1112 14.2426L11 11.4142L7.88873 14.2426L6.3331 12.8284L9.44438 10L6.3331 7.17157L7.88873 5.75736L11 8.5858Z" fill="black"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div class="dashboard-section">
+                <div class="dashboard-header">
+                    <div class="dashboard-info">
+                        <h2>Student Dashboard</h2>
+                        <p class="date">Friday, May 23, 2025</p>
+                    </div>
+                    <button class="start-enrollment-btn">Start Pre-Enrollement</button>
+                </div>
+
+                <!-- Deadline Alert -->
+                <div class="deadline-alert">
+                    <button class="close-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10 8.5858L12.8284 5.75736L14.2426 7.17157L11.4142 10L14.2426 12.8284L12.8284 14.2426L10 11.4142L7.17157 14.2426L5.75736 12.8284L8.5858 10L5.75736 7.17157L7.17157 5.75736L10 8.5858Z" fill="black"/>
+                        </svg>
+                    </button>
+                    <div class="alert-header">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#B45309"/>
+                        </svg>
+                        <span>Pre-enrollment deadline approaching</span>
+                    </div>
+                    <p>You have 5 days left to complete your pre-enrollment for the upcoming semester</p>
+                </div>
+            </div>
+
+            <!-- Selected Courses Section -->
+            <div class="courses-section">
+                <div class="section-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M13 21V23H11V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H9C10.1947 3 11.2671 3.52375 12 4.35418C12.7329 3.52375 13.8053 3 15 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H13ZM20 19V5H15C13.8954 5 13 5.89543 13 7V19H20ZM11 19V7C11 5.89543 10.1046 5 9 5H4V19H11Z" fill="#4B6DCB"/>
+                    </svg>
+                    <h3>Selected Courses</h3>
+                </div>
+
+                <div class="course-item">
+                    <div class="course-info">
+                        <span class="course-name">ICT101: Introduction to Computer Science</span>
+                        <span class="course-progress">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
                     </div>
                 </div>
-                
-                <!-- Sidebar Menu -->
-                <nav class="sidebar-nav">
-                    <div class="nav-item active">
-                        <svg class="nav-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z" fill="black"/>
-                        </svg>
-                        <span>Dashboard</span>
+
+                <div class="course-item">
+                    <div class="course-info">
+                        <span class="course-name">ICT101: Introduction to Computer Science</span>
+                        <span class="course-progress">75%</span>
                     </div>
-                    
-                    <div class="nav-item">
-                        <svg class="nav-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M21 6.75736L19 8.75736V4H10V9H5V20H19V17.2426L21 15.2426V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9.00319 2H19.9978C20.5513 2 21 2.45531 21 2.9918V6.75736ZM21.7782 8.80761L23.1924 10.2218L15.4142 18L13.9979 17.9979L14 16.5858L21.7782 8.80761Z" fill="black"/>
-                        </svg>
-                        <span>Pre-Enrollment</span>
-                    </div>
-                    
-                    <div class="nav-item">
-                        <svg class="nav-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M20 17H22V19H2V17H4V10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10V17ZM18 17V10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10V17H18ZM9 21H15V23H9V21Z" fill="black"/>
-                        </svg>
-                        <span>Notification</span>
-                    </div>
-                    
-                    <div class="nav-item">
-                        <svg class="nav-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="black"/>
-                        </svg>
-                        <span>Profile</span>
-                    </div>
-                    
-                    <div class="nav-item">
-                        <svg class="nav-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M14 22.5L11.2 19H6C5.44772 19 5 18.5523 5 18V7.10256C5 6.55028 5.44772 6.10256 6 6.10256H22C22.5523 6.10256 23 6.55028 23 7.10256V18C23 18.5523 22.5523 19 22 19H16.8L14 22.5ZM15.8387 17H21V8.10256H7V17H11.2H12.1613L14 19.2984L15.8387 17ZM2 2H19V4H3V15H1V3C1 2.44772 1.44772 2 2 2Z" fill="black"/>
-                        </svg>
-                        <span>FAQ</span>
-                    </div>
-                </nav>
-                
-                <!-- Logout -->
-                <div class="sidebar-footer">
-                    <div class="logout-section">
-                        <svg class="logout-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.2713 2 18.1757 3.57078 20.0002 5.99923L17.2909 5.99931C15.8807 4.75499 14.0285 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.029 20 15.8816 19.2446 17.2919 17.9998H20.0009C18.1765 20.4288 15.2717 22 12 22ZM19 16V13H11V11H19V8L24 12L19 16Z" fill="black"/>
-                        </svg>
-                        <button class="logout-btn">Logout</button>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
                     </div>
                 </div>
-            </aside>
-            
-            <!-- Dashboard Content -->
-            <section class="dashboard-content">
-                <!-- Dashboard Title -->
-                <div class="dashboard-header"> <img src="/Assets/home-3-line.svg" alt="Dashboard Icon">
-                    <h1>Student Dashboard</h1>
-                </div>
-                
-                <!-- Notifications -->
-                <div class="notifications">
-                    <!-- Blue notification -->
-                    <div class="notification notification-info">
-                        <div class="notification-content">
-                            <svg class="notification-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#1D4ED8"/>
-                            </svg>
-                            <span>Pre-enrollment is now open for the Fall semester</span>
-                        </div>
-                        <button class="notification-close">
-                            <svg fill="none" viewBox="0 0 22 20">
-                                <path d="M11 20C4.92487 20 0 15.5228 0 10C0 4.47715 4.92487 0 11 0C17.0751 0 22 4.47715 22 10C22 15.5228 17.0751 20 11 20ZM11 18C15.8601 18 19.8 14.4183 19.8 10C19.8 5.58172 15.8601 2 11 2C6.13989 2 2.2 5.58172 2.2 10C2.2 14.4183 6.13989 18 11 18ZM11 8.5858L14.1112 5.75736L15.6669 7.17157L12.5556 10L15.6669 12.8284L14.1112 14.2426L11 11.4142L7.88873 14.2426L6.3331 12.8284L9.44438 10L6.3331 7.17157L7.88873 5.75736L11 8.5858Z" fill="black"/>
-                            </svg>
-                        </button>
+
+                <div class="course-item">
+                    <div class="course-info">
+                        <span class="course-name">ICT101: Introduction to Computer Science</span>
+                        <span class="course-progress">75%</span>
                     </div>
-                    
-                    <!-- Orange notification -->
-                    <div class="notification notification-warning">
-                        <div class="notification-content">
-                            <svg class="notification-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#B45309"/>
-                            </svg>
-                            <span>Your financial aid application needs attention</span>
-                        </div>
-                        <button class="notification-close">
-                            <svg fill="none" viewBox="0 0 22 20">
-                                <path d="M11 20C4.92487 20 0 15.5228 0 10C0 4.47715 4.92487 0 11 0C17.0751 0 22 4.47715 22 10C22 15.5228 17.0751 20 11 20ZM11 18C15.8601 18 19.8 14.4183 19.8 10C19.8 5.58172 15.8601 2 11 2C6.13989 2 2.2 5.58172 2.2 10C2.2 14.4183 6.13989 18 11 18ZM11 8.5858L14.1112 5.75736L15.6669 7.17157L12.5556 10L15.6669 12.8284L14.1112 14.2426L11 11.4142L7.88873 14.2426L6.3331 12.8284L9.44438 10L6.3331 7.17157L7.88873 5.75736L11 8.5858Z" fill="black"/>
-                            </svg>
-                        </button>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
                     </div>
                 </div>
-                
-                <!-- Dashboard Info Section -->
-                <div class="dashboard-info">
-                    <div class="dashboard-meta">
-                        <div>
-                            <h2>Student Dashboard</h2>
-                            <p class="date">Friday, May 23, 2025</p>
-                        </div>
-                        <button class="cta-button">Start Pre-Enrollement</button>
-                    </div>
-                    
-                    <!-- Pre-enrollment deadline warning -->
-                    <div class="notification notification-warning large">
-                        <button class="notification-close-top">
-                            <svg fill="none" viewBox="0 0 20 20">
-                                <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10 8.5858L12.8284 5.75736L14.2426 7.17157L11.4142 10L14.2426 12.8284L12.8284 14.2426L10 11.4142L7.17157 14.2426L5.75736 12.8284L8.5858 10L5.75736 7.17157L7.17157 5.75736L10 8.5858Z" fill="black"/>
-                            </svg>
-                        </button>
-                        <div class="notification-content">
-                            <svg class="notification-icon" fill="none" viewBox="0 0 16 16">
-                                <path d="M8 16C3.58172 16 0 12.4182 0 8C0 3.58172 3.58172 0 8 0C12.4182 0 16 3.58172 16 8C16 12.4182 12.4182 16 8 16ZM8 14.4C11.5346 14.4 14.4 11.5346 14.4 8C14.4 4.46538 11.5346 1.6 8 1.6C4.46538 1.6 1.6 4.46538 1.6 8C1.6 11.5346 4.46538 14.4 8 14.4ZM8.8 6.8V10.4H9.6V12H6.4V10.4H7.2V8.4H6.4V6.8H8.8ZM9.2 4.8C9.2 5.46274 8.66272 6 8 6C7.33728 6 6.8 5.46274 6.8 4.8C6.8 4.13726 7.33728 3.6 8 3.6C8.66272 3.6 9.2 4.13726 9.2 4.8Z" fill="#B45309"/>
-                            </svg>
-                            <div>
-                                <h3>Pre-enrollment deadline approaching</h3>
-                                <p>You have 5 days left to complete your pre-enrollment for the upcoming semester</p>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="view-all-courses">
+                    <a href="#">View All Courses</a>
                 </div>
-                
-                <!-- Selected Courses -->
-                <div class="selected-courses">
-                    <div class="section-header">
-                        <svg class="section-icon" fill="none" viewBox="0 0 24 24">
-                            <path d="M13 21V23H11V21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H9C10.1947 3 11.2671 3.52375 12 4.35418C12.7329 3.52375 13.8053 3 15 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H13ZM20 19V5H15C13.8954 5 13 5.89543 13 7V19H20ZM11 19V7C11 5.89543 10.1046 5 9 5H4V19H11Z" fill="#4B6DCB"/>
-                        </svg>
-                        <h2>Selected Courses</h2>
-                    </div>
-                    
-                    <!-- Course 1 -->
-                    <div class="course-item">
-                        <div class="course-header">
-                            <span class="course-name">ICT101: Introduction to Computer Science</span>
-                            <span class="course-progress">75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 2 -->
-                    <div class="course-item">
-                        <div class="course-header">
-                            <span class="course-name">ICT101: Introduction to Computer Science</span>
-                            <span class="course-progress">75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 3 -->
-                    <div class="course-item">
-                        <div class="course-header">
-                            <span class="course-name">ICT101: Introduction to Computer Science</span>
-                            <span class="course-progress">75%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- View All Courses -->
-                    <div class="view-all-courses">
-                        <a href="#" class="view-all-link">View All Courses</a>
-                    </div>
-                </div>
-            </section>
+            </div>
         </main>
+    </div>
 
         <!-- Divider Line -->
         <div class="divider">
