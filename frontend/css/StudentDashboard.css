@@ -515,21 +515,7 @@ p {
     height: 82px;
 }
 
-.sidebar-logo .logo-part-1 {
-    width: 103px;
-    height: 82px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==') no-repeat;
-    background-size: 176.79% 200.34%;
-    background-position: 50.04% 30.69%;
-}
 
-.sidebar-logo .logo-part-2 {
-    flex: 1;
-    height: 42px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==') no-repeat;
-    background-size: 100% 474.78%;
-    background-position: 0% 81.86%;
-}
 
 /* Sidebar Navigation */
 .sidebar-nav {
