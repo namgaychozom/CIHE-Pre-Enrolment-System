@@ -21,11 +21,6 @@ body {
     padding-bottom: 18px;
     position: relative;
 }
-.header-container {
-    margin-top: 80px; /* Adjust based on your header height */
-    display: flex;
-    /* your existing styles */
-}
 
 /* Header Styles */
 .header {
