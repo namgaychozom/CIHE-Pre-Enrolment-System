@@ -5,41 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Enrollment - Personal Information</title>
     <link rel="stylesheet" href="./css/Pre-Enrolment.css">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="../css/StudentDashboard.css">
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header-content">
             <div class="logo">
-                <div class="logo-image"></div>
-                <div class="logo-text">
-                    <div class="crown-text">CROWN</div>
-                    <div class="institute-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+                <div class="logo-image">
+                    <img src="/Assets/Logo.svg" alt="CIHE Logo">
                 </div>
             </div>
-            
-            <nav class="nav-menu">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Login</a>
-                <a href="#" class="nav-item">Reach out to us</a>
+            <nav class="nav">
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="#about">About</a>
+                <a class="nav-item" href="/frontend/LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
             </nav>
-            
+            <!-- User Profile -->
             <div class="user-profile">
-                <div class="user-icon">👤</div>
+                <div class="user-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z"/>
+                    </svg>
+                </div>
                 <span class="user-name">Nima Selden</span>
-                <div class="dropdown-arrow">▼</div>
+                <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/>
+                </svg>
             </div>
-        </div>
     </header>
 
     <main class="main-content">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-logo">
-                <div class="sidebar-logo-image"></div>
-                <div class="sidebar-logo-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+                <div class="sidebar-logo-image">
+                    <img src="/Assets/Logo.svg" alt="CIHE Logo">
+                </div>
             </div>
             
             <nav class="sidebar-nav">
@@ -157,26 +160,30 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Essential Links</h3>
-                <a href="#">Privacy Policy | Terms of Service</a>
-                <a href="#">FAQ | Contact Support</a>
+    <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Essential Links</h4>
+                        <a href="#">Privacy Policy | Terms of Service</a>
+                        <a href="#">FAQ | Contact Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Information</h4>
+                        <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                        <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                        <p>Campus Address: <span class="address">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+                    <div class="footer-logo">
+                        <div class="footer-logo-image">
+                                                <img src="/Assets/Logo.svg" alt="CIHE Logo">
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
-                <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
-                <p>Campus Address: 116 Pacific Highway, North Sydney, NSW, 2060, Australia</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
-            <div class="footer-logo"></div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

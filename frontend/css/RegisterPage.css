@@ -1,16 +1,4 @@
 /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f2f2f3;
-    line-height: 1.5;
-    color: #000000;
-}
 
 .register-page {
     width: 100%;
@@ -23,86 +11,6 @@ body {
     position: relative;
 }
 
-/* Header Styles (same as other pages) */
-.header {
-    position: absolute;
-    top: 5px;
-    left: 81px;
-    width: 1288px;
-    height: 109px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 39px;
-    gap: 58px;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    height: 102px;
-    width: 359px;
-}
-
-.logo-image {
-    width: 158px;
-    height: 102px;
-    padding: 0 19px;
-    display: flex;
-    align-items: center;
-}
-
-.logo-image::before {
-    content: '';
-    width: 124px;
-    height: 100%;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMUYzODY1Ii8+Cjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+Q0lIRTwvdGV4dD4KPC9zdmc+');
-    background-size: 176.79% 200.34%;
-    background-repeat: no-repeat;
-    background-position: 50.04% 30.69%;
-}
-
-.logo-text {
-    flex: 1;
-    padding: 10px;
-}
-
-.logo-text-full::before {
-    content: '';
-    width: 100%;
-    height: 50px;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjM3IiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjM3IDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjM3IiBoZWlnaHQ9IjUwIiBmaWxsPSIjMUYzODY1Ii8+Cjx0ZXh0IHg9IjExOCIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNST1dOIElOU1RJVFVURSBPRIRIRIEIR1IgRURVQ0FUSU9OPC90ZXh0Pgo8L3N2Zz4=');
-    background-size: 100% 474.78%;
-    background-repeat: no-repeat;
-    background-position: 0% 81.86%;
-    display: block;
-    aspect-ratio: 237.391/50;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 57px;
-    padding: 0 36px;
-    width: 605px;
-}
-
-.nav-item {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-    color: #1c3563;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.nav-item:hover {
-    text-decoration: underline;
-}
 
 /* Register Section */
 .register-section {
@@ -173,7 +81,7 @@ body {
     align-items: flex-end;
     justify-content: flex-start;
     padding: 0 44px;
-    gap: 47px;
+    gap: 37px;
 }
 
 .name-fields {
@@ -296,148 +204,11 @@ body {
 }
 
 .form-links a:hover {
-    text-decoration: underline;
-}
-
-/* Divider */
-.divider {
-    width: 100%;
-    height: 25.34px;
-}
-
-.divider svg {
-    width: 100%;
-    height: 100%;
-}
-
-/* Footer (same as other pages) */
-.footer {
-    background-color: #f2f2f3;
-    width: 100%;
-}
-
-.footer-content {
-    padding: 30px 80px;
-    gap: 200px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 200px;
-    margin-bottom: 30px;
-}
-
-.footer-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 38px;
-}
-
-.footer-column h4 {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-    color: #000000;
-    letter-spacing: -0.32px;
-}
-
-.footer-column a {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-    color: #0434be;
     text-decoration: none;
-    letter-spacing: -0.32px;
+    font-weight: bold;
+    color:#1f3556;
 }
 
-.footer-column a:hover {
-    text-decoration: underline;
-}
-
-.footer-column p {
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-    color: #000000;
-    letter-spacing: -0.32px;
-}
-
-.footer-column .address {
-    color: #0434be;
-}
-
-.footer-bottom {
-    display: flex;
-    gap: 200px;
-    align-items: center;
-}
-
-.footer-bottom p {
-    flex: 1;
-    font-family: 'Times New Roman', serif;
-    font-size: 16px;
-    color: #3b3a3a;
-    letter-spacing: -0.32px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    height: 102px;
-    width: 359px;
-}
-
-.footer-logo-image {
-    width: 158px;
-    height: 102px;
-    padding: 0 19px;
-    display: flex;
-    align-items: center;
-}
-
-.footer-logo-image::before {
-    content: '';
-    width: 124px;
-    height: 100%;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMUYzODY1Ii8+Cjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+Q0lIRTwvdGV4dD4KPC9zdmc+');
-    background-size: 176.79% 200.34%;
-    background-repeat: no-repeat;
-    background-position: 50.04% 30.69%;
-}
-
-.footer-logo-text {
-    flex: 1;
-    padding: 10px;
-}
-
-.footer-logo-text::before {
-    content: '';
-    width: 100%;
-    height: 50px;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjM3IiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjM3IDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjM3IiBoZWlnaHQ9IjUwIiBmaWxsPSIjMUYzODY1Ii8+Cjx0ZXh0IHg9IjExOCIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkNST1dOIElOU1RJVFVURSBPRIRIRIEIR1IgRURVQ0FUSU9OPC90ZXh0Pgo8L3N2Zz4=');
-    background-size: 100% 474.78%;
-    background-repeat: no-repeat;
-    background-position: 0% 81.86%;
-    display: block;
-    aspect-ratio: 237.391/50;
-}
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .header {
-        left: 20px;
-        width: calc(100% - 40px);
-        max-width: 1288px;
-    }
-    
-    .register-container {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    
-    .register-form {
-        max-width: 580px;
-        width: 100%;
-    }
-}
 
 @media (max-width: 768px) {
     .register-container {

@@ -40,29 +40,7 @@ body {
     width: 359px;
 }
 
-.logo-icon {
-    width: 158px;
-    padding: 0 19px;
-}
 
-.logo-image {
-    width: 124px;
-    height: 82px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23003366"/><circle cx="100" cy="100" r="50" fill="%23FFD700"/></svg>') no-repeat center;
-    background-size: cover;
-}
-
-.logo-text {
-    flex: 1;
-    padding: 10px;
-}
-
-.logo-text-image {
-    width: 100%;
-    height: 50px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50"><text x="10" y="30" font-family="Times New Roman" font-size="14" fill="%23003366">CROWN INSTITUTE OF HIGHER EDUCATION</text></svg>') no-repeat left center;
-    background-size: contain;
-}
 
 /* Navigation Styles */
 .nav {

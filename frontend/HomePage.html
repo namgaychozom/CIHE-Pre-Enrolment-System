@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SyncMaster - CIHE's Smart Pre-Enrolment System</title>
-    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/HomePage.css">
+    <link rel="stylesheet" href="./css/Style.css">
 
 </head>
 <body>
@@ -16,15 +16,12 @@
                 <div class="logo-image">
                     <img src="/Assets/Logo.svg" alt="CIHE Logo">
                 </div>
-                <div class="logo-text">
-                    <div class="logo-text-full"></div>
-                </div>
             </div>
             <nav class="nav">
-                <div class="nav-item">Home</div>
-                <div class="nav-item">About</div>
-                <div class="nav-item">Login</div>
-                <div class="nav-item">Reach out to us</div>
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="#about">About</a>
+                <a class="nav-item" href="/frontend/LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
             </nav>
         </header>
 
@@ -45,7 +42,7 @@
         </section>
 
         <!-- What is SyncMaster Section -->
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="about-content">
                 <div class="hero-image-section">
                     <div class="about-image">
@@ -79,7 +76,7 @@
 
                 <div class="feature-block">
                     <h3>Get Started</h3>
-                    <p>Click <strong>Register</strong> to access your student dashboard and start your pre-enrolment process today.</p>
+                    <p>Click <strong><a href="./RegisterPage.html">Register</a></strong> to access your student dashboard and start your pre-enrolment process today.</p>
                 </div>
             </div>
         </section>
@@ -92,7 +89,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer-content">
                 <div class="footer-links">
                     <div class="footer-column">
