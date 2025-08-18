@@ -3,89 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Enrollment - Review & Submit</title>
-     <link rel="stylesheet" href="../css/StudentDashboard.css">
-    <link rel="stylesheet" href="../css/Pre-Enrolment.css"
-    
+    <title>Review and Submit</title>
+    <link rel="stylesheet" href="../css files/Global.css">
+    <link rel="stylesheet" href="../css files/StudentDashboard.css">
+    <link rel="stylesheet" href="../css files/Pre-enrollment.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
+    <div class="homepage">
+        <!-- Header (positioned absolute) -->
+        <header class="header">
             <div class="logo">
-                <div class="logo-image"></div>
-                <div class="logo-text">
-                    <div class="crown-text">CROWN</div>
-                    <div class="institute-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+                <div class="logo-image">
+                    <img src="../../Assets/Logo.svg" alt="CIHE Logo">
                 </div>
             </div>
-            
-            <nav class="nav-menu">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Login</a>
-                <a href="#" class="nav-item">Reach out to us</a>
+            <nav class="nav">
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="#about">About</a>
+                <a class="nav-item" href="./LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
             </nav>
-            
+            <!-- User Profile -->
             <div class="user-profile">
-                <div class="user-icon">👤</div>
-                <span class="user-name">Nima Selden</span>
-                <div class="dropdown-arrow">▼</div>
+                <div class="user-avatar">
+                    <img src="../../Assets/account-circle-fill.svg" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Nima Selden</span>
+                </div>
+                <div class="dropdown-arrow">
+                    <img src="../../Assets/arrow-down-s-line.svg" alt="dropdown-arrow icon">
+                </div>
             </div>
-        </div>
-    </header>
-
-    <main class="main-content">
+        </header>
+        <!-- Main Content Container -->
+        <div class="main-container">
         <!-- Sidebar -->
         <aside class="sidebar">
+            <!-- Logo Placeholder -->
             <div class="sidebar-logo">
-                <div class="sidebar-logo-image"></div>
-                <div class="sidebar-logo-text">CROWN INSTITUTE<br>OF HIGHER EDUCATION</div>
+                <div class="sidebar-logo-img"><img src="../../Assets/Logo.svg" alt="CIHE Logo">
+                </div> 
             </div>
-            
+
+            <!-- Navigation Menu -->
             <nav class="sidebar-nav">
-                <a href="#" class="sidebar-item">
-                    <span class="sidebar-icon">🏠</span>
-                    Dashboard
-                </a>
                 <a href="#" class="sidebar-item active">
-                    <span class="sidebar-icon">📝</span>
-                    Pre-Enrollment
+                    <img src="../../Assets/home-3-line.svg" alt="Dashboard Icon">
+                    <span>Dashboard</span>
                 </a>
                 <a href="#" class="sidebar-item">
-                    <span class="sidebar-icon">🔔</span>
-                    Notification
+                    <img src="../../Assets/file-edit-line.svg" alt="Pre-Enrollment Icon">
+                    <span>Pre-Enrollment</span>
                 </a>
                 <a href="#" class="sidebar-item">
-                    <span class="sidebar-icon">👤</span>
-                    Profile
+                    <img src="../../Assets/notification-3-line.svg" alt="Notification Icon">
+                    <span>Notification</span>
                 </a>
                 <a href="#" class="sidebar-item">
-                    <span class="sidebar-icon">❓</span>
-                    FAQ
+                   <img src="../../Assets/user-line.svg" alt="Profile Icon">
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="../../Assets/discuss-line.svg" alt="FAQ Icon">
+                    <span>FAQ</span>
                 </a>
             </nav>
-            
-            <div class="sidebar-footer">
-                <button class="logout-btn">
-                    <span class="logout-icon">↩</span>
-                    Logout
-                </button>
+
+            <!-- Logout Button -->
+            <div class="logout-section">
+                <div class="logout-button">
+                    <img src="../../Assets/logout-circle-r-line.svg" alt="Logout Icon">
+                    <button class="logout-btn">Logout</button>
+                </div>
             </div>
         </aside>
-
         <!-- Content Area -->
         <section class="content">
-            <div class="page-header">
-                <div class="page-title">
-                    <span class="graduation-cap">🎓</span>
-                    <h1>Student Dashboard</h1>
-                </div>
+            <div class="page-title">
+                <h1>Pre-Enrolment Portal</h1>
+            </div>
                 
-                <div class="info-banner">
-                    <div class="info-icon">ℹ️</div>
-                    <p>Make sure to select courses that fulfil your degree requirements</p>
-                </div>
+            <div class="info-banner">
+                <div class="info-icon"><img src="../../Assets/Info.svg"></div>
+                <p>Make sure to select courses that fulfil your requirements.</p>
             </div>
 
             <!-- Progress Steps -->
@@ -111,7 +112,7 @@
                 <h2>Review & Submit</h2>
                 
                 <div class="review-notice">
-                    <div class="notice-icon">ℹ️</div>
+                    <div class="notice-icon"><img src="../../Assets/Info.svg"></div>
                     <div class="notice-content">
                         <h3>Review your enrolment information before final submission</h3>
                         <p>Please confirm all details are correct before submitting your pre-enrolment.</p>
@@ -227,7 +228,7 @@
 
                 <!-- Success Message -->
                 <div class="success-message">
-                    <div class="success-icon">✅</div>
+                    <div class="success-icon"><img src="../../Assets/checkbox-fill.svg"></div>
                     <div class="success-content">
                         <h3>Your course selections meet the requirements</h3>
                         <p>You have selected 50 credit hours, which meets the full-time enrolment requirements (40 - 50 credits).</p>
@@ -256,34 +257,42 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="button" class="btn-secondary">Back</button>
-                    <button type="submit" class="btn-primary">Submit Enrolment</button>
+                    <button type="button" class="btn-secondary" href="../StudentDashboard/Pre-enrollment2.html">Back</button>
+                    <a href="../StudentDashboard/Pre-enrollment2.html" class="btn-primary">Next</a>
                 </div>
             </div>
         </section>
     </main>
+    <!-- Divider Line -->
+        <div class="divider">
+            <img src="../../Assets/Line 2.svg" alt="Divider Line">
+        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Essential Links</h3>
-                <a href="#">Privacy Policy | Terms of Service</a>
-                <a href="#">FAQ | Contact Support</a>
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Essential Links</h4>
+                        <a href="#">Privacy Policy | Terms of Service</a>
+                        <a href="#">FAQ | Contact Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Information</h4>
+                        <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                        <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                        <p>Campus Address: <span class="address">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+                    <div class="footer-logo">
+                        <div class="footer-logo-image">
+                            <img src="../../Assets/Logo.svg" alt="CIHE Logo">
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
-                <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
-                <p>Campus Address: 116 Pacific Highway, North Sydney, NSW, 2060, Australia</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
-            <div class="footer-logo"></div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

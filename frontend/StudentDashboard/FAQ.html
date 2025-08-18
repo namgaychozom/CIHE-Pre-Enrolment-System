@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard - FAQ</title>
-    <link rel="stylesheet" href="../css/FAQ.css">
-    <link rel="stylesheet" href="../css/Style.css">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../css files/Global.css">
+    <link rel="stylesheet" href="../css files/FAQ.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <!-- Logo -->
+    <div class="homepage">
+        <!-- Header (positioned absolute) -->
+        <header class="header">
             <div class="logo">
-                <div class="logo-icon">
-                    <div class="logo-image"></div>
-                </div>
-                <div class="logo-text">
-                    <div class="logo-text-image"></div>
+                <div class="logo-image">
+                    <img src="../../Assets/Logo.svg" alt="CIHE Logo">
                 </div>
             </div>
-            
-            <!-- Navigation -->
             <nav class="nav">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Login</a>
-                <a href="#" class="nav-link">Reach out to us</a>
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="#about">About</a>
+                <a class="nav-item" href="./LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
             </nav>
-            
             <!-- User Profile -->
             <div class="user-profile">
                 <div class="user-avatar">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z"/>
-                    </svg>
+                    <img src="../../Assets/account-circle-fill.svg" alt="User Avatar">
                 </div>
-                <span class="user-name">Nima Selden</span>
-                <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/>
-                </svg>
+                <div class="user-info">
+                    <span class="user-name">Nima Selden</span>
+                </div>
+                <div class="dropdown-arrow">
+                    <img src="../../Assets/arrow-down-s-line.svg" alt="dropdown-arrow icon">
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Content -->
+        <!-- Main Content -->
     <main class="main-content">
         <div class="dashboard-container">
             <!-- Sidebar -->
@@ -249,11 +241,9 @@
         </div>
     </main>
 
-     <!-- Divider Line -->
+        <!-- Divider Line -->
         <div class="divider">
-            <svg viewBox="0 0 1450 26" fill="none">
-                <line x1="10.0069" y1="9.5" x2="1440" y2="14.8398" stroke="black"/>
-            </svg>
+            <img src="../../Assets/Line 2.svg" alt="Divider Line">
         </div>
 
         <!-- Footer -->
@@ -276,14 +266,13 @@
                     <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
                     <div class="footer-logo">
                         <div class="footer-logo-image">
-                                                <img src="/Assets/Logo.svg" alt="CIHE Logo">
+                            <img src="../../Assets/Logo.svg" alt="CIHE Logo">
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-
-    <script>
+        <script>
         // FAQ dropdown functionality
         function toggleFaq(button) {
             const faqItem = button.parentElement;
@@ -330,5 +319,6 @@
             resetForm();
         });
     </script>
+    
 </body>
 </html>

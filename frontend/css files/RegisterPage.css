@@ -1,6 +1,4 @@
-/* Reset and base styles */
-
-.login-page {
+.register-page {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -11,10 +9,10 @@
     position: relative;
 }
 
-/* Login Section */
-.login-section {
+/* Register Section */
+.register-section {
     width: 100%;
-    height: 778px;
+    height: 800px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -22,19 +20,20 @@
     justify-content: center;
 }
 
-.login-container {
+.register-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 778px;
+    height: 800px;
     padding: 94px 190px 0;
+    gap: 9px;
 }
 
-.login-form {
-    width: 556px;
-    height: 563px;
+.register-form {
+    width: 580px;
+    height: 600px;
     border: 1px solid #000000;
     border-radius: 50px;
     display: flex;
@@ -73,13 +72,19 @@
 }
 
 .form-fields {
-    height: 222px;
+    height: 353px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 0 60px;
-    gap: 47px;
+    padding: 0 44px;
+    gap: 37px;
+}
+
+.name-fields {
+    width: 100%;
+    display: flex;
+    gap: 15px;
 }
 
 .field-group {
@@ -87,6 +92,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.name-fields .field-group {
+    flex: 1;
 }
 
 .field-group label {
@@ -123,8 +132,8 @@
 .input-icon {
     position: absolute;
     right: 22px;
-    width: 22px;
-    height: 21px;
+    width: 26px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,42 +145,8 @@
 }
 
 .password-icon {
-    width: 21px;
+    width: 24px;
     height: 22.505px;
-}
-
-.remember-me {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 64px;
-    width: 556px;
-    height: auto;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.checkbox {
-    width: 19px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.checkbox svg {
-    width: 100%;
-    height: 100%;
-}
-
-.checkbox-container span {
-    font-size: 20px;
-    color: #000000;
-    line-height: 21px;
 }
 
 .form-actions {
@@ -179,11 +154,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 32px;
+    gap: 0;
     width: 100%;
+    padding: 8px 0;
 }
 
-.login-btn {
+.register-btn {
     background-color: #28406c;
     color: #ffffff;
     border: none;
@@ -191,113 +167,41 @@
     padding: 10px;
     width: 276px;
     height: 58px;
+    font-family: 'Times New Roman', serif;
     font-size: 16px;
     letter-spacing: -0.32px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-.login-btn:hover {
+.register-btn:hover {
     background-color: #1f3556;
 }
 
 .form-links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 157px;
+    justify-content: flex-start;
     width: 100%;
     height: 53px;
+    padding: 0 50px;
 }
 
 .form-links a {
+    flex: 1;
+    font-family: 'Times New Roman', serif;
     font-size: 16px;
     color: #000000;
     text-decoration: none;
     letter-spacing: -0.32px;
-    width: 199.5px;
-    text-align: center;
     height: 21px;
 }
 
 .form-links a:hover {
     text-decoration: none;
     font-weight: bold;
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .header {
-        left: 20px;
-        width: calc(100% - 40px);
-        max-width: 1288px;
-    }
-    
-    .login-container {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    
-    .login-form {
-        max-width: 556px;
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .login-container {
-        padding: 40px 20px 0;
-    }
-    
-    .login-form {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        padding: 20px 0;
-    }
-    
-    .form-header {
-        padding: 0 20px;
-    }
-    
-    .form-header h1 {
-        font-size: 28px;
-    }
-    
-    .form-fields {
-        padding: 0 30px;
-        gap: 30px;
-    }
-    
-    .remember-me {
-        padding: 0 30px;
-    }
-    
-    .form-links {
-        flex-direction: column;
-        gap: 20px;
-        height: auto;
-    }
-    
-    .form-links a {
-        width: auto;
-    }
-    
-    .nav {
-        gap: 20px;
-    }
-    
-    .nav-item {
-        font-size: 14px;
-    }
-    
-    .footer-links,
-    .footer-bottom {
-        flex-direction: column;
-        gap: 30px;
-    }
+    color:#1f3556;
 }

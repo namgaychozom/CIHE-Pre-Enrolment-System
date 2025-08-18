@@ -5,12 +5,10 @@
     font-family: 'Times New Roman', serif;
 }
 body {
-    
     background-color: #f2f2f3;
     line-height: 1.5;
     color: #000000;
 }
-
 .homepage {
     width: 100%;
     min-height: 100vh;
@@ -21,7 +19,6 @@ body {
     padding-bottom: 18px;
     position: relative;
 }
-
 /* Header Styles */
 .header {
     position: absolute;
@@ -39,14 +36,12 @@ body {
     gap: 58px;
     z-index: 1000;
 }
-
 .logo {
     display: flex;
     align-items: center;
     height: 102px;
     width: 359px;
 }
-
 .logo-image {
     width: 158px;
     height: 102px;
@@ -54,8 +49,6 @@ body {
     display: flex;
     align-items: center;
 }
-
-
 .nav {
     display: flex;
     align-items: center;
@@ -64,7 +57,6 @@ body {
     padding: 0 36px;
     width: 630px;
 }
-
 .nav-item {
     font-size: 16px;
     color: #1c3563;
@@ -74,23 +66,10 @@ body {
     text-align: center; 
     text-decoration: none;
 }
-
 .nav-item:hover {
     font-weight: bold;
     text-decoration: double;
 }
-
-/* Divider */
-.divider {
-    width: 100%;
-    height: 25.34px;
-}
-
-.divider svg {
-    width: 100%;
-    height: 100%;
-}
-
 /* Footer */
 .footer {
     background-color: #f2f2f3;
@@ -102,7 +81,6 @@ body {
     gap: 200px;
     
 }
-
 .footer-links {
     display: flex;
     gap: 200px;
@@ -169,53 +147,4 @@ body {
     padding: 0 19px;
     display: flex;
     align-items: center;
-}
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .header {
-        left: 20px;
-        width: calc(100% - 40px);
-        max-width: 1288px;
-    }
-    
-    .hero-content,
-    .about-content,
-    .features-content {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content,
-    .about-content {
-        flex-direction: column;
-        height: auto;
-        gap: 30px;
-    }
-    
-    .hero-text,
-    .about-text {
-        padding: 30px 20px;
-    }
-    
-    .hero-text h1,
-    .about-text h2 {
-        font-size: 32px;
-    }
-    
-    .nav {
-        gap: 20px;
-    }
-    
-    .nav-item {
-        font-size: 14px;
-    }
-    
-    .footer-links,
-    .footer-bottom {
-        flex-direction: column;
-        gap: 30px;
-    }
 }
