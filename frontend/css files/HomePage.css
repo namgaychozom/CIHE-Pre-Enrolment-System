@@ -55,6 +55,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.learn-more-btn-text {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .learn-more-btn:hover {

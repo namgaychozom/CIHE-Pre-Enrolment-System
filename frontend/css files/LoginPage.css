@@ -196,9 +196,14 @@
     align-items: center;
     justify-content: center;
 }
+.login-btn-text {
+    text-decoration: none;
+    color: #ffffff;
+}   
 
 .login-btn:hover {
-    background-color: #1f3556;
+    background-color: white;
+    color: black;
 }
 
 .form-links {

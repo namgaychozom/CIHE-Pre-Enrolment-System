@@ -167,7 +167,6 @@
     padding: 10px;
     width: 276px;
     height: 58px;
-    font-family: 'Times New Roman', serif;
     font-size: 16px;
     letter-spacing: -0.32px;
     cursor: pointer;
@@ -176,9 +175,14 @@
     justify-content: center;
     margin-bottom: 10px;
 }
+.register-btn-text {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .register-btn:hover {
-    background-color: #1f3556;
+    background-color: #28406c;
+    color: white;   
 }
 
 .form-links {
