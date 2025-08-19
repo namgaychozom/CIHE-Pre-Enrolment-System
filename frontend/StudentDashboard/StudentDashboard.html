@@ -3,210 +3,712 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="../css files/Global.css">
-    <link rel="stylesheet" href="../css files/StudentDashboard.css">
+    <title>CIHE Student Portal</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-    <div class="homepage">
-        <!-- Header (positioned absolute) -->
+    <!-- Dashboard View -->
+    <div id="dashboard-view" class="view active">
+        <!-- Header -->
         <header class="header">
             <div class="logo">
                 <div class="logo-image">
-                    <img src="../../Assets/Logo.svg" alt="CIHE Logo">
+                    <img src="../CIHE-Pre-Enrolment-System/Assets/Logo.svg" alt="CIHE Logo">
                 </div>
             </div>
             <nav class="nav">
-                <a class="nav-item" href="./HomePage.html">Home</a>
-                <a class="nav-item" href="#about">About</a>
-                <a class="nav-item" href="./LoginPage.html">Login</a>
-                <a class="nav-item" href="#footer">Reach out to us</a>
+                <button class="nav-item active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-item" data-tab="units">Units</button>
+                <button class="nav-item" data-tab="notifications">
+                    Notifications
+                    <span id="notification-badge" class="notification-badge">3</span>
+                </button>
+                <button class="nav-item" data-tab="profile">Profile</button>
             </nav>
-            <!-- User Profile -->
-            <div class="user-profile">
-                <div class="user-avatar">
-                    <img src="../../Assets/account-circle-fill.svg" alt="User Avatar">
-                </div>
-                <div class="user-info">
-                    <span class="user-name">Nima Selden</span>
-                </div>
-                <div class="dropdown-arrow">
-                    <img src="../../Assets/arrow-down-s-line.svg" alt="dropdown-arrow icon">
+
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                            <div class="hidden sm:block">
+                                <span class="text-sm font-medium">Nima Selden</span>
+                                <p class="text-xs text-gray-500">Student ID: CIHE23084</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-ghost">
+                            <i data-lucide="log-out" class="w-4 h-4"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
 
-    <!-- Main Content Container -->
-    <div class="main-container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- Logo Placeholder -->
-            <div class="sidebar-logo">
-                <div class="sidebar-logo-img"><img src="../../Assets/Logo.svg" alt="CIHE Logo"></div>
-                
-            </div>
-
-            <!-- Navigation Menu -->
-            <nav class="sidebar-nav">
-                <a href="#" class="sidebar-item active">
-                    <img src="../../Assets/home-3-line.svg" alt="Dashboard Icon">
-                    <span>Dashboard</span>
-                </a>
-                <a href="#" class="sidebar-item">
-                    <img src="../../Assets/file-edit-line.svg" alt="Pre-Enrollment Icon">
-                    <span>Pre-Enrollment</span>
-                </a>
-                <a href="#" class="sidebar-item">
-                    <img src="../../Assets/notification-3-line.svg" alt="Notification Icon">
-                    <span>Notification</span>
-                </a>
-                <a href="#" class="sidebar-item">
-                   <img src="../../Assets/user-line.svg" alt="Profile Icon">
-                    <span>Profile</span>
-                </a>
-                <a href="#" class="sidebar-item">
-                    <img src="../../Assets/discuss-line.svg" alt="FAQ Icon">
-                    <span>FAQ</span>
-                </a>
-            </nav>
-
-            <!-- Logout Button -->
-            <div class="logout-section">
-                <div class="logout-button">
-                    <img src="../../Assets/logout-circle-r-line.svg" alt="Logout Icon">
-                    <button class="logout-btn">Logout</button>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Page Title -->
-            <div class="page-title">
-                <img src="../../Assets/graduation-cap-line.svg" alt="Dashboard Icon">
-                <h1>Student Dashboard</h1>
-            </div>
-
-            <!-- Alert Notifications -->
-            <div class="alert-section">
-                <div class="alert alert-info">
-                    <div class="alert-content">
-                        <img src="../../Assets/Info.svg" alt="Info Icon">
-                        <span>Pre-enrollment is now open for the Fall semester</span>
-                    </div>
-                    <button class="alert-close">
-                        <img src="../../Assets/close.svg" alt="Close Icon">
+        <!-- Mobile Navigation -->
+        <div class="md:hidden bg-white border-b">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex items-center justify-around py-3">
+                    <button class="mobile-nav-btn active" data-tab="dashboard">
+                        <i data-lucide="book-open" class="w-4 h-4 mb-1"></i>
+                        <span class="text-xs">Dashboard</span>
                     </button>
-                </div>
-
-                <div class="alert alert-warning">
-                    <div class="alert-content">
-                        <img src="../../Assets/red info.svg" alt="Warning Icon">
-                        <span>Your financial aid application needs attention</span>
-                    </div>
-                    <button class="alert-close">
-                        <img src="../../Assets/close.svg" alt="Close Icon">
+                    <button class="mobile-nav-btn" data-tab="units">
+                        <i data-lucide="file-text" class="w-4 h-4 mb-1"></i>
+                        <span class="text-xs">Units</span>
+                    </button>
+                    <button class="mobile-nav-btn" data-tab="notifications">
+                        <i data-lucide="bell" class="w-4 h-4 mb-1"></i>
+                        <span class="text-xs">Notifications</span>
+                        <span class="mobile-notification-badge">3</span>
+                    </button>
+                    <button class="mobile-nav-btn" data-tab="profile">
+                        <i data-lucide="user" class="w-4 h-4 mb-1"></i>
+                        <span class="text-xs">Profile</span>
                     </button>
                 </div>
             </div>
-
-            <!-- Dashboard Section -->
-            <div class="dashboard-section">
-                <div class="dashboard-header">
-                    <div class="dashboard-info">
-                        <h2>Student Dashboard</h2>
-                        <p class="date">Friday, May 23, 2025</p>
-                    </div>
-                    <button class="start-enrollment-btn">Start Pre-Enrollement</button>
-                </div>
-
-                <!-- Deadline Alert -->
-                <div class="deadline-alert">
-                    <button class="close-btn">
-                        <img src="../../Assets/close.svg" alt="Close Icon">
-                    </button>
-                    <div class="alert-header">
-                        <img src="../../Assets/red info.svg" alt="Warning Icon">
-                        <span>Pre-enrollment deadline approaching</span>
-                    </div>
-                    <p>You have 5 days left to complete your pre-enrollment for the upcoming semester</p>
-                </div>
-            </div>
-
-            <!-- Selected Courses Section -->
-            <div class="courses-section">
-                <div class="section-header">
-                    <img src="../../Assets/book-open-line.svg" alt="Courses Icon">
-                    <h3>Selected Courses</h3>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-info">
-                        <span class="course-name">ICT101: Introduction to Computer Science</span>
-                        <span class="course-progress">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-info">
-                        <span class="course-name">ICT101: Introduction to Computer Science</span>
-                        <span class="course-progress">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-info">
-                        <span class="course-name">ICT101: Introduction to Computer Science</span>
-                        <span class="course-progress">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-
-                <div class="view-all-courses">
-                    <a href="#">View All Courses</a>
-                </div>
-            </div>
-        </main>
-    </div>
-    <!-- Divider Line -->
-        <div class="divider">
-            <img src="../../Assets/Line 2.svg" alt="Divider Line">
         </div>
 
-        <!-- Footer -->
-        <footer class="footer" id="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Essential Links</h4>
-                        <a href="#">Privacy Policy | Terms of Service</a>
-                        <a href="#">FAQ | Contact Support</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact Information</h4>
-                        <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
-                        <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
-                        <p>Campus Address: <span class="address">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content active">
+                <!-- Welcome Section -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1>Welcome back, Nima!</h1>
+                            <p class="text-gray-600">Semester 1, 2025 Unit Selection</p>
+                        </div>
+                        <button id="start-enrollment-btn" class="btn btn-primary hidden sm:flex">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                            Select Units & Availability
+                        </button>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
-                    <div class="footer-logo">
-                        <div class="footer-logo-image">
-                            <img src="../../Assets/Logo.svg" alt="CIHE Logo">
+
+                <!-- High Priority Notifications -->
+                <div id="priority-notifications" class="mb-8 space-y-4">
+                    <div class="alert alert-destructive">
+                        <i data-lucide="graduation-cap" class="h-4 w-4 text-purple-600"></i>
+                        <div class="alert-content">
+                            <div class="alert-header">
+                                <span class="alert-title">Pre-enrollment is now open</span>
+                                <div class="alert-actions">
+                                    <button class="btn btn-ghost btn-sm">Mark as Read</button>
+                                    <button class="btn btn-ghost btn-sm">×</button>
+                                </div>
+                            </div>
+                            <div class="alert-description">
+                                Pre-enrollment for Semester 1, 2025 is now available. Select your units and available time blocks by March 15th.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile CTA -->
+                <div class="sm:hidden mb-6">
+                    <button id="mobile-enrollment-btn" class="btn btn-primary w-full">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                        Select Units & Availability
+                    </button>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Available Units Preview -->
+                    <div class="lg:col-span-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="card-title">
+                                            <i data-lucide="book-open" class="w-5 h-5 text-blue-600 mr-2"></i>
+                                            Available Units - Semester 1, 2025
+                                        </h3>
+                                        <p class="card-description">Units you can select for this semester</p>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm" data-tab="units">
+                                        View All
+                                        <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-content space-y-4">
+                                <div class="unit-preview">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4>Fundamentals of Computability</h4>
+                                                <span class="badge badge-secondary">Suggested</span>
+                                            </div>
+                                            <p class="text-sm text-gray-500">ICT104 • Dr. Brown</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="badge badge-outline">10 credits</span>
+                                            <span class="badge badge-success">12 seats left</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm text-gray-600">Tue/Thu 8:15am - 11:15am</div>
+                                </div>
+
+                                <div class="unit-preview">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4>Advanced Programming</h4>
+                                                <span class="badge badge-secondary">Suggested</span>
+                                            </div>
+                                            <p class="text-sm text-gray-500">ICT105 • Prof. Davis</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="badge badge-outline">10 credits</span>
+                                            <span class="badge badge-success">8 seats left</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm text-gray-600">Mon/Wed 2:45pm - 5:45pm</div>
+                                </div>
+
+                                <div class="unit-preview">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4>Database Systems</h4>
+                                                <span class="badge badge-secondary">Suggested</span>
+                                            </div>
+                                            <p class="text-sm text-gray-500">ICT106 • Dr. Martinez</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="badge badge-outline">10 credits</span>
+                                            <span class="badge badge-success">15 seats left</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm text-gray-600">Tue/Thu 11:30am - 2:30pm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-6">
+                        <!-- Quick Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Quick Actions</h3>
+                            </div>
+                            <div class="card-content space-y-3">
+                                <button class="btn btn-outline w-full quick-action" id="quick-enrollment">
+                                    <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                                    Unit Selection & Availability
+                                </button>
+                                <button class="btn btn-outline w-full quick-action" data-tab="units">
+                                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                                    Browse Available Units
+                                </button>
+                                <button class="btn btn-outline w-full quick-action" data-tab="profile">
+                                    <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+                                    Update Profile
+                                </button>
+                                <button class="btn btn-outline w-full quick-action">
+                                    <i data-lucide="help-circle" class="w-4 h-4 mr-2"></i>
+                                    Get Help
+                                </button>
+                            </div>
+                        </div>
+
+                        
+
+                        <!-- Important Dates -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Important Dates</h3>
+                            </div>
+                            <div class="card-content space-y-3">
+                                <div class="date-item">
+                                    <div>
+                                        <p class="text-sm font-medium">Pre-enrollment deadline</p>
+                                        <p class="text-xs text-gray-500">March 15, 2025</p>
+                                    </div>
+                                    <span class="badge badge-destructive">5 days left</span>
+                                </div>
+                                <div class="date-item">
+                                    <div>
+                                        <p class="text-sm font-medium">Semester 1 starts</p>
+                                        <p class="text-xs text-gray-500">March 25, 2025</p>
+                                    </div>
+                                    <span class="badge badge-secondary">15 days</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    
+
+            <!-- Units Tab -->
+            <div id="units-tab" class="tab-content">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1>Available Units - Semester 1, 2025</h1>
+                            <p class="text-gray-600 mt-1">Select units for your upcoming semester</p>
+                        </div>
+                        <button class="btn btn-primary" id="units-enrollment-btn">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                            Select Units & Availability
+                        </button>
+                    </div>
+
+                    <!-- Search and Filter -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-1 relative">
+                                    <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"></i>
+                                    <input type="text" id="units-search" placeholder="Search units by name, code, or instructor..." class="input pl-10">
+                                </div>
+                                <select id="units-filter" class="select">
+                                    <option value="all">All Units</option>
+                                    <option value="suggested">Suggested</option>
+                                    <option value="available">Available</option>
+                                    <option value="full">Full</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Suggested Units Section -->
+                    <div id="suggested-units-section">
+                        <h2 class="text-xl font-semibold mb-4 flex items-center">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-2"></i>
+                            Suggested Units for Your Program
+                        </h2>
+                        <div id="suggested-units-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"></div>
+                    </div>
+
+                    <!-- All Units Section -->
+                    <div id="all-units-section">
+                        <h2 class="text-xl font-semibold mb-4">All Available Units</h2>
+                        <div id="all-units-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+                    </div>
+
+                    <!-- No Results -->
+                    <div id="no-units-found" class="card" style="display: none;">
+                        <div class="card-content empty-state">
+                            <i data-lucide="file-text" class="empty-state-icon"></i>
+                            <h3>No units found</h3>
+                            <p>Try adjusting your search or filter criteria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications Tab -->
+            <div id="notifications-tab" class="tab-content">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1>Notifications</h1>
+                            <p class="text-gray-600 mt-1">Stay updated with important announcements</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span id="unread-count" class="badge badge-outline">3 unread</span>
+                            <button class="btn btn-outline" id="mark-all-read">Mark All Read</button>
+                        </div>
+                    </div>
+
+                    <!-- Search and Filter for Notifications -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-1 relative">
+                                    <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"></i>
+                                    <input type="text" id="notifications-search" placeholder="Search notifications..." class="input pl-10">
+                                </div>
+                                <select id="notifications-filter" class="select">
+                                    <option value="all">All Notifications</option>
+                                    <option value="unread">Unread Only</option>
+                                    <option value="high">High Priority</option>
+                                    <option value="enrollment">Enrollment</option>
+                                    <option value="assignment">Assignments</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications List -->
+                    <div id="notifications-list" class="space-y-4"></div>
+
+                    <!-- No Notifications Found -->
+                    <div id="no-notifications-found" class="card" style="display: none;">
+                        <div class="card-content empty-state">
+                            <i data-lucide="bell" class="empty-state-icon"></i>
+                            <h3>No notifications found</h3>
+                            <p>Try adjusting your search or filter criteria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="profile-tab" class="tab-content">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1>Profile</h1>
+                            <p class="text-gray-600 mt-1">Manage your personal information and account settings</p>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i data-lucide="edit" class="w-4 h-4 mr-2"></i>
+                            Edit Profile
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Profile Overview -->
+                        <div class="lg:col-span-1">
+                            <div class="card">
+                                <div class="card-content p-6">
+                                    <div class="flex flex-col items-center text-center">
+                                        <div class="w-24 h-24 bg-gray-300 rounded-full mb-4 flex items-center justify-center">
+                                            <span class="text-lg font-medium">NS</span>
+                                        </div>
+                                        <h2 class="text-xl font-semibold mb-1">Nima Selden</h2>
+                                        <p class="text-gray-600 mb-2">Student ID: CIHE23084</p>
+                                        <span class="badge badge-outline mb-4">Active Student</span>
+                                        
+                                        <div class="w-full border-t pt-4 space-y-3 text-sm">
+                                            <div class="flex justify-between">
+                                                <span class="text-gray-600">GPA:</span>
+                                                <span class="font-medium">3.7</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="text-gray-600">Credits:</span>
+                                                <span class="font-medium">30/120</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="text-gray-600">Year:</span>
+                                                <span class="font-medium">Year 1</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="text-gray-600">Status:</span>
+                                                <span class="font-medium text-green-600">Good Standing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Details -->
+                        <div class="lg:col-span-2 space-y-6">
+                            <!-- Personal Information -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Personal Information</h3>
+                                </div>
+                                <div class="card-content space-y-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Full Name</label>
+                                            <p class="mt-1">Nima Selden</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Student ID</label>
+                                            <p class="mt-1">CIHE23084</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Email Address</label>
+                                            <p class="mt-1 flex items-center">
+                                                <i data-lucide="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
+                                                cihe23084@student.cihe.edu.au
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Phone Number</label>
+                                            <p class="mt-1 flex items-center">
+                                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
+                                                +61 XXX XXX XXX
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Address</label>
+                                            <p class="mt-1 flex items-start">
+                                                <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-gray-400 mt-0.5"></i>
+                                                123 Student Street<br />
+                                                Melbourne, VIC 3000
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Emergency Contact</label>
+                                            <p class="mt-1">John Selden (Father)<br />+61 XXX XXX XXX</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Academic Information -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Academic Information</h3>
+                                </div>
+                                <div class="card-content space-y-4">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Program</label>
+                                            <p class="mt-1">Bachelor of Information Technology</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Faculty</label>
+                                            <p class="mt-1">Faculty of Information Technology</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Enrollment Date</label>
+                                            <p class="mt-1">March 2024</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Expected Graduation</label>
+                                            <p class="mt-1">December 2027</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Academic Advisor</label>
+                                            <p class="mt-1">Dr. Sarah Johnson</p>
+                                        </div>
+                                        <div>
+                                            <label class="text-sm font-medium text-gray-500">Study Mode</label>
+                                            <p class="mt-1">Full-time</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Account Settings -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Account Settings</h3>
+                                </div>
+                                <div class="card-content space-y-4">
+                                    <div class="flex items-center justify-between py-2">
+                                        <div>
+                                            <p class="font-medium">Email Notifications</p>
+                                            <p class="text-sm text-gray-600">Receive notifications about units and deadlines</p>
+                                        </div>
+                                        <input type="checkbox" checked class="h-4 w-4">
+                                    </div>
+                                    <div class="flex items-center justify-between py-2">
+                                        <div>
+                                            <p class="font-medium">SMS Notifications</p>
+                                            <p class="text-sm text-gray-600">Receive urgent notifications via SMS</p>
+                                        </div>
+                                        <input type="checkbox" class="h-4 w-4">
+                                    </div>
+                                    <div class="flex items-center justify-between py-2">
+                                        <div>
+                                            <p class="font-medium">Profile Visibility</p>
+                                            <p class="text-sm text-gray-600">Allow other students to see your profile</p>
+                                        </div>
+                                        <input type="checkbox" class="h-4 w-4">
+                                    </div>
+                                    <div class="border-t pt-4">
+                                        <div class="flex space-x-2">
+                                            <button class="btn btn-outline">Change Password</button>
+                                            <button class="btn btn-outline">Two-Factor Authentication</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-enrollment Form View -->
+    <div id="form-view" class="view">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center space-x-4">
+                        <button id="back-to-dashboard" class="btn btn-ghost">
+                            <i data-lucide="chevron-left" class="w-4 h-4 mr-1"></i>
+                            Back to Dashboard
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-semibold text-gray-900">Pre-Enrollment Form</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span id="step-indicator" class="text-sm text-gray-500">Step 1 of 3</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Progress Steps -->
+            <div class="mb-8" id="progress-steps">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center step-item" data-step="1">
+                        <div class="step-circle active">
+                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                        </div>
+                        <div class="step-text">
+                            <p class="step-title active">Unit Selection</p>
+                            <p class="step-description">Choose your units</p>
+                        </div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="flex items-center step-item" data-step="2">
+                        <div class="step-circle">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                        </div>
+                        <div class="step-text">
+                            <p class="step-title">Availability</p>
+                            <p class="step-description">Set your available times</p>
+                        </div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="flex items-center step-item" data-step="3">
+                        <div class="step-circle">
+                            <i data-lucide="file-check" class="w-5 h-5"></i>
+                        </div>
+                        <div class="step-text">
+                            <p class="step-title">Review & Submit</p>
+                            <p class="step-description">Confirm your selections</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 id="form-title" class="card-title">Unit Selection</h3>
+                    <p id="form-description" class="card-description">Choose your units</p>
+                </div>
+                <div class="card-content">
+                    <!-- Step 1: Unit Selection -->
+                    <div id="step-1" class="form-step active">
+                        <div class="space-y-6">
+                            <div class="alert">
+                                <i data-lucide="alert-circle" class="h-4 w-4 text-blue-600"></i>
+                                <div class="alert-content">
+                                    <div class="alert-title">Unit Selection Guidelines</div>
+                                    <div class="alert-description">
+                                        <ul class="list-disc list-inside mt-2 space-y-1">
+                                            <li>Select 3-6 units for optimal workload balance</li>
+                                            <li>Each unit is worth 10 credits</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="course-selection">
+                                <!-- Course cards will be populated by JavaScript -->
+                            </div>
+
+                            <div id="selected-summary" class="summary-card" style="display: none;">
+                                <h4>Selected Units (<span id="selected-count">0</span>/6)</h4>
+                                <div id="selected-list"></div>
+                                <div class="summary-total">
+                                    Total Credits: <span id="total-credits">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Availability -->
+                    <div id="step-2" class="form-step">
+                        <div class="space-y-6">
+                            <div class="alert">
+                                <i data-lucide="clock" class="h-4 w-4 text-blue-600"></i>
+                                <div class="alert-content">
+                                    <div class="alert-title">Set Your Available Time Blocks</div>
+                                    <div class="alert-description">
+                                        Select at least 3 time blocks when you're available for classes.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="availability-grid" class="availability-grid">
+                                <!-- Availability grid will be populated by JavaScript -->
+                            </div>
+
+                            <div id="availability-summary" class="summary-card" style="display: none;">
+                                <h4>Your Availability Summary</h4>
+                                <div id="availability-list"></div>
+                                <div class="summary-total">
+                                    Total available time blocks: <span id="total-blocks">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Review & Submit -->
+                    <div id="step-3" class="form-step">
+                        <div class="space-y-6">
+                            <div class="alert">
+                                <i data-lucide="check-circle-2" class="h-4 w-4 text-green-600"></i>
+                                <div class="alert-content">
+                                    <div class="alert-title">Review Your Unit Selection</div>
+                                    <div class="alert-description">
+                                        Please review all information before submitting.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Selected Units</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div id="review-units"></div>
+                                    <div class="summary-total">
+                                        Total Credits: <span id="review-total-credits">0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Your Available Time Blocks</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div id="review-availability"></div>
+                                    <div class="summary-total">
+                                        Total Available Time Blocks: <span id="review-total-blocks">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center mt-8">
+                <button id="prev-step" class="btn btn-outline" disabled>
+                    <i data-lucide="chevron-left" class="w-4 h-4 mr-1"></i>
+                    Previous
+                </button>
+
+                <div id="step-help" class="text-sm text-gray-500"></div>
+
+                <button id="next-step" class="btn btn-primary" disabled>
+                    Next
+                    <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                </button>
+
+                <button id="submit-form" class="btn btn-primary" style="display: none;">
+                    <span id="submit-text">Submit to Admin</span>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

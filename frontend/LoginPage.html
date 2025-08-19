@@ -56,16 +56,14 @@
                         </div>
 
                         <div class="remember-me">
-                            <div class="checkbox-container">
-                                <div class="checkbox">
-                                    <img src="../Assets/Checkbox.svg" alt="Checkbox Icon">
-                                </div>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="rememberMe">
                                 <span>Remember me</span>
-                            </div>
+                            </label>
                         </div>
 
                         <div class="form-actions">
-                            <button class="login-btn"><a class="login-btn-text" href="./StudentDashboard/StudentDashboard.html">Login</a></button>
+                            <button class="login-btn" id="loginBtn">Login</button>
                             <div class="form-links">
                                 <a href="./RegisterPage.html">Create an account</a>
                                 <a href="#">Forgot Password?</a>
@@ -107,6 +105,38 @@
                 </div>
             </div>
         </footer>
+        <script>
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const rememberMeCheckbox = document.getElementById("rememberMe");
+    const loginBtn = document.getElementById("loginBtn");
+
+    // On page load, check localStorage
+    window.onload = function () {
+        if (localStorage.getItem("rememberMe") === "true") {
+            usernameInput.value = localStorage.getItem("username") || "";
+            passwordInput.value = localStorage.getItem("password") || "";
+            rememberMeCheckbox.checked = true;
+        }
+    };
+
+    // Handle login button click
+    loginBtn.addEventListener("click", function () {
+        if (rememberMeCheckbox.checked) {
+            localStorage.setItem("username", usernameInput.value);
+            localStorage.setItem("password", passwordInput.value); // ⚠ Not secure
+            localStorage.setItem("rememberMe", "true");
+        } else {
+            localStorage.removeItem("username");
+            localStorage.removeItem("password");
+            localStorage.setItem("rememberMe", "false");
+        }
+
+        // Redirect after login
+        window.location.href = "StudentDashboard/StudentDashboard.html"; // Adjust path as necessary
+    });
+</script>
+
     
 </body>
 </html>
