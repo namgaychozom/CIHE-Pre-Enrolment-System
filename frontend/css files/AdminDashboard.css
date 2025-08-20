@@ -39,6 +39,11 @@
   width: auto;
   height: 80px;
 }
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+}
 :root {
     --color-background: #ffffff;
     --color-foreground: #030213;
