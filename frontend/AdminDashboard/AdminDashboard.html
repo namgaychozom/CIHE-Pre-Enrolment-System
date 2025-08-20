@@ -11,19 +11,16 @@
     <div class="dashboard-container">
         <!-- Header -->
         <header class="header">
-            <div class="header-content">
-                <div class="header-left">
-                    <div class="logo-container">
-                        <div class="logo-icon">
-                            <img src="../../Assets/book-open-line.svg" alt="CIHE Logo">
-                        </div>
-                        <span class="logo-text"> Admin Dashboard</span>
-                    </div>
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="../../Assets/Logo.svg" alt="CIHE Logo">
                 </div>
-                <div class="header-right">
-                    <div class="user-info">
-                        <div class="user-avatar"></div>
-                        <span class="user-name">Admin User</span>
+                <span class="logo-text"> Admin Dashboard</span>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <span class="user-name">Admin User</span>
                     </div>
                 </div>
             </div>
@@ -39,7 +36,7 @@
                     <button class="tab-trigger" data-tab="timetable">Generate Timetable</button>
                 </div>
 
-                <!-- Dashboard Tab Content -->
+            <!-- Dashboard Tab Content -->
                 <div class="tab-content active" id="dashboard">
                     <div class="stats-grid">
                         <div class="stat-card">
@@ -376,6 +373,13 @@
                 <div class="tab-content" id="availability">
                     <div class="page-header">
                         <h2 class="page-title">Student Availability Analysis</h2>
+                            <button class="btn-outline">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                View Full Report
+                            </button>
                         <button class="btn-outline">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 3v5h5"/>
@@ -384,10 +388,11 @@
                             </svg>
                             Generate Report
                         </button>
+                        
                     </div>
 
                     <!-- Availability Heatmap -->
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Availability Heatmap</h3>
                             <p class="card-description">Number of students available for each time slot</p>
@@ -439,24 +444,99 @@
                                 <span>Legend:</span>
                                 <div class="legend-item">
                                     <div class="legend-color low"></div>
-                                    <span>Low (1-2)</span>
+                                    <span>Fundamentals of Computability</span>
                                 </div>
                                 <div class="legend-item">
                                     <div class="legend-color medium"></div>
-                                    <span>Medium (2-3)</span>
+                                    <span>Database</span>
                                 </div>
                                 <div class="legend-item">
                                     <div class="legend-color good"></div>
-                                    <span>Good (3-4)</span>
+                                    <span>Introduction to IT</span>
                                 </div>
                                 <div class="legend-item">
                                     <div class="legend-color high"></div>
-                                    <span>High (4+)</span>
+                                    <span>Cyber Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Availability Heatmap -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Availability Heatmap</h3>
+                            <p class="card-description">Number of students available for each time slot</p>
+                        </div>
+                        <div class="card-content">
+                            <table class="heatmap-table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8:15am - 11:15am</td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:30am - 2:30pm</td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2:45pm - 5:45pm</td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6:00pm -9:00pm</td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></td>
+                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div class="heatmap-legend">
+                                <span>Legend:</span>
+                                <div class="legend-item">
+                                    <div class="legend-color low"></div>
+                                    <span>Fundamentals of Computability</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color medium"></div>
+                                    <span>Database</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color good"></div>
+                                    <span>Introduction to IT</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color high"></div>
+                                    <span>Cybersecurity</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Schedule Issues -->
                     <div class="card">
                         <div class="card-header">
@@ -568,7 +648,7 @@
                     </div>
 
                     <!-- Preview Timetable -->
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Proposed Timetable</h3>
                             <p class="card-description">Generated based on student availability and preferences</p>
@@ -636,6 +716,81 @@
                                     <div class="timetable-cell slot"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div> -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Proposed Timetable</h3>
+                            <p class="card-description">Generated based on student availability and preferences</p>
+                        </div>
+                        <div class="card-content">
+                            <table class="timetable-table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>9:00 AM</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <div class="course-block green">
+                                                Programming Fundamentals<br>
+                                                4 students • Room 101
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00 AM</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <div class="course-block blue">
+                                                Database Design<br>
+                                                4 students • Room 102
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1:00 PM</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="course-block purple">
+                                                AI Fundamentals<br>
+                                                4 students • Lab A
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3:00 PM</td>
+                                        <td>
+                                            <div class="course-block orange">
+                                                Data Structures<br>
+                                                3 students • Room 103
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 

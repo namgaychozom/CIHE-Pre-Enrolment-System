@@ -5,7 +5,40 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', serif;
 }
+/* StudentDashboard Header Styles */
+.header {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1288px;
+  height: 109px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 39px;
+  z-index: 1000;
+}
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  padding: 0 19px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image img {
+  width: auto;
+  height: 80px;
+}
 :root {
     --color-background: #ffffff;
     --color-foreground: #030213;
@@ -40,7 +73,7 @@ body {
 
 /* Layout Containers */
 .dashboard-container {
-    min-height: 100vh;
+    min-height: 13vh;
     background-color: #f9fafb;
 }
 
@@ -50,51 +83,6 @@ body {
     padding: 2rem 1rem;
 }
 
-/* Header */
-.header {
-    background-color: var(--color-background);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-}
-
-.header-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    background-color: white#2563eb;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.logo-text {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-foreground);
-}
 
 .header-right {
     display: flex;
@@ -133,6 +121,7 @@ body {
     background-color: var(--color-muted);
     border-radius: var(--radius);
     padding: 0.25rem;
+    color: #1c3563;
 }
 
 .tab-trigger {
@@ -148,12 +137,15 @@ body {
 }
 
 .tab-trigger:hover {
-    color: var(--color-foreground);
+    font-weight: bold;
+  background-color: #f3f4f6;
+  color: #1c3563;
 }
 
 .tab-trigger.active {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: #1c3563;
+  color: white;
+  font-weight: bold;
     box-shadow: var(--shadow-sm);
 }
 
@@ -983,4 +975,93 @@ body {
     .data-table td {
         padding: 0.5rem;
     }
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: none !important;
+  }
+  
+  .header .flex.items-center.space-x-4 {
+    display: none !important;
+  }
+  
+  /* Center the logo on mobile */
+  .header {
+    justify-content: center;
+  }
+}
+
+.main-content {
+    margin-top: 50px; /* Push content below the fixed header */
+    padding-top: 0;
+}
+
+/* Ensure grid containers don't overlap header */
+.heatmap-grid, .timetable-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.heatmap-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    vertical-align: middle;
+}
+
+.heatmap-table th {
+    font-weight: 500;
+    background-color: var(--color-muted);
+}
+
+.heatmap-table td:first-child {
+    font-weight: 500;
+    text-align: left;
+}
+
+.timetable-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.timetable-table th,
+.timetable-table td {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    min-height: 80px;
+    vertical-align: middle;
+}
+
+.timetable-table th {
+    font-weight: 500;
+    background-color: var(--color-muted);
+    text-align: center;
+    min-height: auto;
+}
+
+.timetable-table td:first-child {
+    font-weight: 500;
+    text-align: left;
+}
+
+.timetable-table td:not(:first-child) {
+    background-color: var(--color-background);
+    cursor: pointer;
+}
+
+.timetable-table td:not(:first-child):hover {
+    background-color: var(--color-muted);
 }

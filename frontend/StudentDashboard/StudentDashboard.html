@@ -144,7 +144,6 @@
                                         </div>
                                         <div class="flex items-center space-x-2">
                                             <span class="badge badge-outline">10 credits</span>
-                                            <span class="badge badge-success">12 seats left</span>
                                         </div>
                                     </div>
                                     <div class="text-sm text-gray-600">Tue/Thu 8:15am - 11:15am</div>
@@ -161,7 +160,7 @@
                                         </div>
                                         <div class="flex items-center space-x-2">
                                             <span class="badge badge-outline">10 credits</span>
-                                            <span class="badge badge-success">8 seats left</span>
+                                            
                                         </div>
                                     </div>
                                     <div class="text-sm text-gray-600">Mon/Wed 2:45pm - 5:45pm</div>
@@ -178,7 +177,7 @@
                                         </div>
                                         <div class="flex items-center space-x-2">
                                             <span class="badge badge-outline">10 credits</span>
-                                            <span class="badge badge-success">15 seats left</span>
+                                            
                                         </div>
                                     </div>
                                     <div class="text-sm text-gray-600">Tue/Thu 11:30am - 2:30pm</div>
@@ -260,19 +259,25 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="flex items-center space-x-4">
-                                <div class="flex-1 relative">
-                                    <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"></i>
-                                    <input type="text" id="units-search" placeholder="Search units by name, code, or instructor..." class="input pl-10">
+                                <div class="flex-1">
+                                    <div class="flex items-center border rounded-lg px-3 h-10 bg-white">
+                                    <i data-lucide="search" class="text-gray-400 h-4 w-4 mr-2"></i>
+                                    <input type="text" id="notifications-search" placeholder="Search notifications..." class="flex-1 focus:outline-none bg-transparent">
                                 </div>
-                                <select id="units-filter" class="select">
+                                </div>
+                                <div class="w-40">
+                                <select id="notifications-filter" class="select">
                                     <option value="all">All Units</option>
                                     <option value="suggested">Suggested</option>
                                     <option value="available">Available</option>
                                     <option value="full">Full</option>
                                 </select>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                            
 
                     <!-- Suggested Units Section -->
                     <div id="suggested-units-section">
@@ -318,10 +323,13 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="flex items-center space-x-4">
-                                <div class="flex-1 relative">
-                                    <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"></i>
-                                    <input type="text" id="notifications-search" placeholder="Search notifications..." class="input pl-10">
+                                <div class="flex-1">
+                                    <div class="flex items-center border rounded-lg px-3 h-10 bg-white">
+                                    <i data-lucide="search" class="text-gray-400 h-4 w-4 mr-2"></i>
+                                    <input type="text" id="notifications-search" placeholder="Search notifications..." class="flex-1 focus:outline-none bg-transparent">
                                 </div>
+                                </div>
+                                <div class="w-40">
                                 <select id="notifications-filter" class="select">
                                     <option value="all">All Notifications</option>
                                     <option value="unread">Unread Only</option>
@@ -329,6 +337,7 @@
                                     <option value="enrollment">Enrollment</option>
                                     <option value="assignment">Assignments</option>
                                 </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -372,13 +381,10 @@
                                         </div>
                                         <h2 class="text-xl font-semibold mb-1">Nima Selden</h2>
                                         <p class="text-gray-600 mb-2">Student ID: CIHE23084</p>
-                                        <span class="badge badge-outline mb-4">Active Student</span>
+                                        
                                         
                                         <div class="w-full border-t pt-4 space-y-3 text-sm">
-                                            <div class="flex justify-between">
-                                                <span class="text-gray-600">GPA:</span>
-                                                <span class="font-medium">3.7</span>
-                                            </div>
+                                            
                                             <div class="flex justify-between">
                                                 <span class="text-gray-600">Credits:</span>
                                                 <span class="font-medium">30/120</span>
@@ -387,10 +393,7 @@
                                                 <span class="text-gray-600">Year:</span>
                                                 <span class="font-medium">Year 1</span>
                                             </div>
-                                            <div class="flex justify-between">
-                                                <span class="text-gray-600">Status:</span>
-                                                <span class="font-medium text-green-600">Good Standing</span>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -455,26 +458,17 @@
                                             <label class="text-sm font-medium text-gray-500">Program</label>
                                             <p class="mt-1">Bachelor of Information Technology</p>
                                         </div>
-                                        <div>
-                                            <label class="text-sm font-medium text-gray-500">Faculty</label>
-                                            <p class="mt-1">Faculty of Information Technology</p>
-                                        </div>
+                                        
                                         <div>
                                             <label class="text-sm font-medium text-gray-500">Enrollment Date</label>
                                             <p class="mt-1">March 2024</p>
                                         </div>
+
                                         <div>
-                                            <label class="text-sm font-medium text-gray-500">Expected Graduation</label>
-                                            <p class="mt-1">December 2027</p>
+                                            <label class="text-sm font-medium text-gray-500">Academic Coordinator</label>
+                                            <p class="mt-1">Dr. Reza Rafeh</p>
                                         </div>
-                                        <div>
-                                            <label class="text-sm font-medium text-gray-500">Academic Advisor</label>
-                                            <p class="mt-1">Dr. Sarah Johnson</p>
-                                        </div>
-                                        <div>
-                                            <label class="text-sm font-medium text-gray-500">Study Mode</label>
-                                            <p class="mt-1">Full-time</p>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -499,13 +493,7 @@
                                         </div>
                                         <input type="checkbox" class="h-4 w-4">
                                     </div>
-                                    <div class="flex items-center justify-between py-2">
-                                        <div>
-                                            <p class="font-medium">Profile Visibility</p>
-                                            <p class="text-sm text-gray-600">Allow other students to see your profile</p>
-                                        </div>
-                                        <input type="checkbox" class="h-4 w-4">
-                                    </div>
+                                    
                                     <div class="border-t pt-4">
                                         <div class="flex space-x-2">
                                             <button class="btn btn-outline">Change Password</button>
@@ -533,7 +521,7 @@
                             Back to Dashboard
                         </button>
                     </div>
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-3">
                         <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                             <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
                         </div>

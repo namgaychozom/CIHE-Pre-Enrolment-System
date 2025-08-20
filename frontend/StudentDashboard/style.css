@@ -90,7 +90,7 @@ body {
 /* View Management - Fixed */
 .view {
   display: none;
-  min-height: 100vh;
+  min-height: 10vh;
   padding-top: 130px; /* Space for fixed header */
 }
 
@@ -311,7 +311,7 @@ p {
 }
 
 .btn-primary {
-  background-color: #030213 !important;
+  background-color: #1c3563 !important;
   color: white !important;
   border-color: #030213 !important;
 }
@@ -843,4 +843,19 @@ p {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: none !important;
+  }
+  
+  .header .flex.items-center.space-x-4 {
+    display: none !important;
+  }
+  
+  /* Center the logo on mobile */
+  .header {
+    justify-content: center;
+  }
 }

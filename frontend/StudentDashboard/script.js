@@ -413,10 +413,7 @@ function createUnitCard(course, isDetailed = false) {
           </div>
           <div class="flex items-center space-x-2">
             <span class="badge badge-outline">${course.credits} credits</span>
-            ${course.seats.available > 0 ? 
-              `<span class="badge badge-success">${course.seats.available} seats left</span>` :
-              '<span class="badge badge-destructive">Full</span>'
-            }
+            
           </div>
         </div>
       </div>
@@ -767,6 +764,26 @@ function renderCourseSelection() {
   
   suggestedCourses.forEach(course => {
     const isSelected = selectedCourses.includes(course.id);
+    // html += `
+    //   <div class="course-card ${isSelected ? 'selected' : ''}" data-course-id="${course.id}">
+    //     <div class="flex items-start justify-between">
+    //       <div class="flex-1">
+    //         <div class="flex items-center gap-2 mb-2">
+    //           <h4>${course.code}</h4>
+    //           <span class="badge badge-secondary">Suggested</span>
+    //         </div>
+    //         <p class="text-sm text-gray-600 mb-2">${course.name}</p>
+    //         <div class="text-xs text-gray-500 space-y-1">
+    //           <p>${course.credits} credits | ${course.instructor}</p>
+    //           <p>${course.schedule}</p>
+    //           <p class="text-green-600">${course.seats.available}/${course.seats.total} seats available</p>
+    //         </div>
+    //         ${course.prerequisites ? `<p class="text-xs text-red-600 mt-1">Prerequisites: ${course.prerequisites.join(', ')}</p>` : ''}
+    //       </div>
+    //       <input type="checkbox" ${isSelected ? 'checked' : ''}>
+    //     </div>
+    //   </div>
+    // `;
     html += `
       <div class="course-card ${isSelected ? 'selected' : ''}" data-course-id="${course.id}">
         <div class="flex items-start justify-between">
@@ -779,7 +796,6 @@ function renderCourseSelection() {
             <div class="text-xs text-gray-500 space-y-1">
               <p>${course.credits} credits | ${course.instructor}</p>
               <p>${course.schedule}</p>
-              <p class="text-green-600">${course.seats.available}/${course.seats.total} seats available</p>
             </div>
             ${course.prerequisites ? `<p class="text-xs text-red-600 mt-1">Prerequisites: ${course.prerequisites.join(', ')}</p>` : ''}
           </div>
@@ -807,7 +823,6 @@ function renderCourseSelection() {
             <div class="flex items-center gap-4 text-sm text-gray-500">
               <span>${course.instructor}</span>
               <span>${course.schedule}</span>
-              <span class="text-green-600">${course.seats.available}/${course.seats.total} seats</span>
             </div>
           </div>
           <input type="checkbox" ${isSelected ? 'checked' : ''}>
@@ -989,7 +1004,6 @@ function updateReviewUnits() {
         </div>
         <div class="text-right">
           <span class="badge badge-outline">${course.credits} credits</span>
-          <p class="text-xs text-gray-500 mt-1">${course.seats.available} seats available</p>
         </div>
       </div>
     ` : '';
