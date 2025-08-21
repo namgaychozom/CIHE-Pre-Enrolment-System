@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIHE Admin Dashboard</title>
+    <title>CIHE Admin Portal</title>
     <link rel="stylesheet" href="../css files/AdminDashboard.css">
     <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="script">
 </head>
@@ -21,9 +21,9 @@
                 <div class="user-info">
                     <div class="user-avatar"></div>
                     <span class="user-name">Admin User</span>
-                    </div>
                 </div>
             </div>
+        </div>
         </header>
 
         <div class="main-content">
@@ -32,26 +32,23 @@
                 <div class="tabs-list">
                     <button class="tab-trigger active" data-tab="dashboard">Dashboard</button>
                     <button class="tab-trigger" data-tab="enrollment">Student Enrollment</button>
-                    <button class="tab-trigger" data-tab="availability">Availability Reports</button>
-                    <button class="tab-trigger" data-tab="timetable">Generate Timetable</button>
+                    <button class="tab-trigger" data-tab="units">Units & Students</button>
                 </div>
 
             <!-- Dashboard Tab Content -->
-                <div class="tab-content active" id="dashboard">
-                    <div class="stats-grid">
-                        
-
-                        <div class="stat-card">
-                            <div class="stat-header">
-                                <h3 class="stat-title">Schedule Issues</h3>
-                                <svg class="stat-icon warning" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                                    <path d="M12 9v4"/>
-                                    <path d="m12 17 .01 0"/>
-                                </svg>
-                            </div>
-                            <div class="stat-content">
-                                <div class="stat-number">2</div>
+            <div class="tab-content active" id="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3 class="stat-title">Schedule Issues</h3>
+                            <svg class="stat-icon warning" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                                <path d="M12 9v4"/>
+                                <path d="m12 17 .01 0"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">2</div>
                                 <p class="stat-description">Availability conflicts</p>
                             </div>
                         </div>
@@ -73,7 +70,7 @@
 
                         <div class="stat-card">
                             <div class="stat-header">
-                                <h3 class="stat-title">Timetable Status</h3>
+                                <h3 class="stat-title">Active Units</h3>
                                 <svg class="stat-icon green" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
                                     <line x1="16" y1="2" x2="16" y2="6"/>
@@ -82,8 +79,8 @@
                                 </svg>
                             </div>
                             <div class="stat-content">
-                                <div class="stat-number">Draft</div>
-                                <p class="stat-description">Ready to generate</p>
+                                <div class="stat-number">9</div>
+                                <p class="stat-description">This semester</p>
                             </div>
                         </div>
                     </div>
@@ -146,42 +143,50 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Popular Time Slots</h3>
-                                <p class="card-description">Most requested availability times</p>
+                                <h3 class="card-title">Unit Enrollment Overview</h3>
+                                <p class="card-description">Students enrolled in each unit</p>
                             </div>
                             <div class="card-content">
                                 <div class="time-slots-list">
                                     <div class="time-slot-item">
                                         <div class="time-slot-info">
-                                            <p class="slot-time">Tuesday 11:30am - 2:45pm</p>
-                                            <p class="slot-students">4 students available</p>
+                                            <p class="slot-time">Programming Fundamentals</p>
+                                            <p class="slot-students">ACT: 1, Sydney: 1</p>
                                         </div>
-                                        
+                                        <div class="time-slot-badge">
+                                            <span class="badge secondary">2 students</span>
+                                        </div>
                                     </div>
                                     <div class="time-slot-item">
                                         <div class="time-slot-info">
-                                            <p class="slot-time">Wednesday 11:30am - 2:45pm</p>
-                                            <p class="slot-students">4 students available</p>
+                                            <p class="slot-time">Database Design</p>
+                                            <p class="slot-students">ACT: 2, Sydney: 0</p>
                                         </div>
-                                        
+                                        <div class="time-slot-badge">
+                                            <span class="badge secondary">2 students</span>
+                                        </div>
                                     </div>
                                     <div class="time-slot-item">
                                         <div class="time-slot-info">
-                                            <p class="slot-time">Thursday 8:15am -11:15am</p>
-                                            <p class="slot-students">4 students available</p>
+                                            <p class="slot-time">Web Development</p>
+                                            <p class="slot-students">ACT: 2, Sydney: 0</p>
                                         </div>
-                                        
+                                        <div class="time-slot-badge">
+                                            <span class="badge secondary">2 students</span>
+                                        </div>
                                     </div>
                                     <div class="time-slot-item">
                                         <div class="time-slot-info">
-                                            <p class="slot-time">Friday 8:15am - 11:15am</p>
-                                            <p class="slot-students">4 students available</p>
+                                            <p class="slot-time">Software Engineering</p>
+                                            <p class="slot-students">ACT: 1, Sydney: 1</p>
                                         </div>
-                                        
+                                        <div class="time-slot-badge">
+                                            <span class="badge secondary">2 students</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <button class="btn-outline full-width" onclick="switchTab('availability')">
-                                    View Full Report
+                                <button class="btn-outline full-width" onclick="switchTab('units')">
+                                    View Units & Students
                                 </button>
                             </div>
                         </div>
@@ -211,9 +216,14 @@
                                         <circle cx="11" cy="11" r="8"/>
                                         <path d="m21 21-4.35-4.35"/>
                                     </svg>
-                                    <input type="text" class="search-input" placeholder="Search by student name or ID...">
+                                    <input type="text" class="search-input" id="enrollment-search" placeholder="Search by student name, ID, or unit...">
                                 </div>
-                                <select class="filter-select">
+                                <select class="filter-select" id="location-filter">
+                                    <option value="all">All Locations</option>
+                                    <option value="ACT">ACT</option>
+                                    <option value="Sydney">Sydney</option>
+                                </select>
+                                <select class="filter-select" id="status-filter">
                                     <option value="all">All Status</option>
                                     <option value="pending">Pending</option>
                                     <option value="approved">Approved</option>
@@ -230,10 +240,9 @@
                             <table class="data-table">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <input type="checkbox" class="checkbox">
-                                        </th>
+                                        <th><input type="checkbox" class="checkbox"></th>
                                         <th>Student</th>
+                                        <th>Location</th>
                                         <th>Units Selected</th>
                                         <th>Availability</th>
                                         <th>Status</th>
@@ -241,15 +250,16 @@
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody id="enrollment-table-body">
+                                    <tr data-location="ACT" data-status="pending" data-student="alice johnson" data-units="programming fundamentals,database design,web development">
                                         <td><input type="checkbox" class="checkbox"></td>
                                         <td>
                                             <div class="student-info">
                                                 <div class="student-name">Alice Johnson</div>
-                                                <div class="student-id">ST2024001</div>
+                                                <div class="student-id">CIHE23990</div>
                                             </div>
                                         </td>
+                                        <td><span class="badge location-badge">ACT</span></td>
                                         <td>
                                             <div class="courses-list">
                                                 <div>Programming Fundamentals</div>
@@ -275,14 +285,15 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr data-location="Sydney" data-status="approved" data-student="bob smith" data-units="data structures,software engineering,programming fundamentals">
                                         <td><input type="checkbox" class="checkbox"></td>
                                         <td>
                                             <div class="student-info">
                                                 <div class="student-name">Bob Smith</div>
-                                                <div class="student-id">ST2024002</div>
+                                                <div class="student-id">CIHE12990</div>
                                             </div>
                                         </td>
+                                        <td><span class="badge location-badge">Sydney</span></td>
                                         <td>
                                             <div class="courses-list">
                                                 <div>Data Structures</div>
@@ -307,7 +318,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr data-location="ACT" data-status="pending" data-student="carol davis" data-units="ai fundamentals,machine learning,database design">
                                         <td><input type="checkbox" class="checkbox"></td>
                                         <td>
                                             <div class="student-info">
@@ -315,6 +326,7 @@
                                                 <div class="student-id">ST2024003</div>
                                             </div>
                                         </td>
+                                        <td><span class="badge location-badge">ACT</span></td>
                                         <td>
                                             <div class="courses-list">
                                                 <div>AI Fundamentals</div>
@@ -340,221 +352,392 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr data-location="Sydney" data-status="pending" data-student="david wilson" data-units="cybersecurity,network administration">
+                                        <td><input type="checkbox" class="checkbox"></td>
+                                        <td>
+                                            <div class="student-info">
+                                                <div class="student-name">David Wilson</div>
+                                                <div class="student-id">ST2024004</div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge location-badge">Sydney</span></td>
+                                        <td>
+                                            <div class="courses-list">
+                                                <div>Cybersecurity</div>
+                                                <div>Network Administration</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="availability-info">
+                                                <div class="availability-count">5 days available</div>
+                                                <div class="availability-details">
+                                                    <div>Monday: 2 slots</div>
+                                                    <div>Tuesday: 3 slots</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge pending">pending</span></td>
+                                        <td>2024-01-18</td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-outline small">View Details</button>
+                                                <button class="btn-primary small">Approve</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-location="ACT" data-status="approved" data-student="emma brown" data-units="web development,software engineering,ai fundamentals">
+                                        <td><input type="checkbox" class="checkbox"></td>
+                                        <td>
+                                            <div class="student-info">
+                                                <div class="student-name">Emma Brown</div>
+                                                <div class="student-id">ST2024005</div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge location-badge">ACT</span></td>
+                                        <td>
+                                            <div class="courses-list">
+                                                <div>Web Development</div>
+                                                <div>Software Engineering</div>
+                                                <div class="course-more">+1 more</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="availability-info">
+                                                <div class="availability-count">4 days available</div>
+                                                <div class="availability-details">
+                                                    <div>Monday: 2 slots</div>
+                                                    <div>Tuesday: 2 slots</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge approved">approved</span></td>
+                                        <td>2024-01-19</td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn-outline small">View Details</button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
 
-                <!-- Availability Reports Tab Content -->
-                <div class="tab-content" id="availability">
+                <!-- Units & Students Tab Content -->
+                <div class="tab-content" id="units">
                     <div class="page-header">
-                        <h2 class="page-title">Student Availability Analysis</h2>
-                            <button class="btn-outline">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12,6 12,12 16,14"/>
+                        <h2 class="page-title">Units & Students</h2>
+                            <div class="page-actions">
+                            <select class="filter-select" id="units-location-filter">
+                                <option value="all">All Locations</option>
+                                <option value="ACT">ACT</option>
+                                <option value="Sydney">Sydney</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Unit Search -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="search-container">
+                                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="m21 21-4.35-4.35"/>
                                 </svg>
-                                View Full Report
-                            </button>
-                        <button class="btn-outline">
-                            
-                            Generate Report
-                        </button>
-                        
-                    </div>
-
-                    <!-- Availability Heatmap -->
-                    <!-- <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Availability Heatmap</h3>
-                            <p class="card-description">Number of students available for each time slot</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="heatmap-grid">
-                                <div class="heatmap-header">
-                                    <div class="heatmap-cell header">Time</div>
-                                    <div class="heatmap-cell header">Monday</div>
-                                    <div class="heatmap-cell header">Tuesday</div>
-                                    <div class="heatmap-cell header">Wednesday</div>
-                                    <div class="heatmap-cell header">Thursday</div>
-                                    <div class="heatmap-cell header">Friday</div>
-                                </div>
-                                <div class="heatmap-row">
-                                    <div class="heatmap-cell time">9:00 AM</div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                </div>
-                                <div class="heatmap-row">
-                                    <div class="heatmap-cell time">11:00 AM</div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                </div>
-                                <div class="heatmap-row">
-                                    <div class="heatmap-cell time">1:00 PM</div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                </div>
-                                <div class="heatmap-row">
-                                    <div class="heatmap-cell time">3:00 PM</div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></div>
-                                    <div class="heatmap-cell"><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></div>
-                                </div>
-                            </div>
-                            <div class="heatmap-legend">
-                                <span>Legend:</span>
-                                <div class="legend-item">
-                                    <div class="legend-color low"></div>
-                                    <span>Fundamentals of Computability</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color medium"></div>
-                                    <span>Database</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color good"></div>
-                                    <span>Introduction to IT</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color high"></div>
-                                    <span>Cyber Security</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Availability Heatmap -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Availability Heatmap</h3>
-                            <p class="card-description">Number of students available for each time slot</p>
-                        </div>
-                        <div class="card-content">
-                            <table class="heatmap-table">
-                                <thead>
-                                    <tr>
-                                        <th>Time</th>
-                                        <th>Monday</th>
-                                        <th>Tuesday</th>
-                                        <th>Wednesday</th>
-                                        <th>Thursday</th>
-                                        <th>Friday</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>8:15am - 11:15am</td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>11:30am - 2:30pm</td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2:45pm - 5:45pm</td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6:00pm -9:00pm</td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value high">4</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value low">2</div><div class="heatmap-label">students</div></td>
-                                        <td><div class="heatmap-value good">3</div><div class="heatmap-label">students</div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                            <div class="heatmap-legend">
-                                <span>Legend:</span>
-                                <div class="legend-item">
-                                    <div class="legend-color low"></div>
-                                    <span>Fundamentals of Computability</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color medium"></div>
-                                    <span>Database</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color good"></div>
-                                    <span>Introduction to IT</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color high"></div>
-                                    <span>Cybersecurity</span>
-                                </div>
+                                <input type="text" class="search-input" id="unit-search" placeholder="Search units...">
                             </div>
                         </div>
                     </div>
-                    <!-- Schedule Issues -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Scheduling Recommendations</h3>
-                            <p class="card-description">Issues and suggestions for timetable optimization</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="alerts-container">
-                                <div class="alert medium">
-                                    <svg class="alert-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                                        <path d="M12 9v4"/>
-                                        <path d="m12 17 .01 0"/>
-                                    </svg>
-                                    <div class="alert-content">
-                                        <div class="alert-header">
-                                            <span class="alert-title">Low Availability</span>
-                                            <span class="badge medium">medium</span>
+
+                    <!-- Units List -->
+                    <div class="units-container" id="units-container">
+                        <div class="card unit-card" data-unit="programming fundamentals">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Programming Fundamentals</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">2 students</span>
+                                        <span class="badge outline">ACT: 1</span>
+                                        <span class="badge outline">Sydney: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Alice Johnson</div>
+                                            <div class="student-id">CIHE23902</div>
                                         </div>
-                                        <div class="alert-details">
-                                            <p>Only 2 students available for AI Fundamentals on Wednesday 9:00 AM</p>
-                                            <p class="alert-info">Course: AI Fundamentals</p>
-                                            <p class="alert-info">Time Slot: Wednesday 9:00 AM</p>
-                                            <p class="alert-suggestion">💡 Consider moving to Tuesday 1:00 PM (4 students available)</p>
-                                            <button class="btn-outline small">Apply Suggestion</button>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                    <div class="student-item" data-location="Sydney">
+                                        <div class="student-info">
+                                            <div class="student-name">Bob Smith</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">Sydney</span>
+                                            <span class="badge approved">approved</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="alert high">
-                                    <svg class="alert-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                                        <path d="M12 9v4"/>
-                                        <path d="m12 17 .01 0"/>
-                                    </svg>
-                                    <div class="alert-content">
-                                        <div class="alert-header">
-                                            <span class="alert-title">Overcrowded Slot</span>
-                                            <span class="badge destructive">high</span>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="database design">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Database Design</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">2 students</span>
+                                        <span class="badge outline">ACT: 2</span>
+                                        <span class="badge outline">Sydney: 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Alice Johnson</div>
+                                            <div class="student-id">CIHE23902</div>
                                         </div>
-                                        <div class="alert-details">
-                                            <p>Tuesday 1:00 PM has high demand across multiple courses</p>
-                                            <p class="alert-info">Course: Multiple Courses</p>
-                                            <p class="alert-info">Time Slot: Tuesday 1:00 PM</p>
-                                            <p class="alert-suggestion">💡 Distribute some courses to less popular time slots</p>
-                                            <button class="btn-outline small">Apply Suggestion</button>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Carol Davis</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="web development">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Web Development</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">2 students</span>
+                                        <span class="badge outline">ACT: 2</span>
+                                        <span class="badge outline">Sydney: 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Alice Johnson</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Emma Brown</div>
+                                            <div class="student-id">ST2024005</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge approved">approved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="data structures">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Data Structures</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">1 student</span>
+                                        <span class="badge outline">ACT: 0</span>
+                                        <span class="badge outline">Sydney: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="Sydney">
+                                        <div class="student-info">
+                                            <div class="student-name">Bob Smith</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">Sydney</span>
+                                            <span class="badge approved">approved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="software engineering">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Software Engineering</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">2 students</span>
+                                        <span class="badge outline">ACT: 1</span>
+                                        <span class="badge outline">Sydney: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="Sydney">
+                                        <div class="student-info">
+                                            <div class="student-name">Bob Smith</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">Sydney</span>
+                                            <span class="badge approved">approved</span>
+                                        </div>
+                                    </div>
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Emma Brown</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge approved">approved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="ai fundamentals">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">AI Fundamentals</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">2 students</span>
+                                        <span class="badge outline">ACT: 2</span>
+                                        <span class="badge outline">Sydney: 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Carol Davis</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Emma Brown</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge approved">approved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="machine learning">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Machine Learning</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">1 student</span>
+                                        <span class="badge outline">ACT: 1</span>
+                                        <span class="badge outline">Sydney: 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="ACT">
+                                        <div class="student-info">
+                                            <div class="student-name">Carol Davis</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">ACT</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="cybersecurity">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Cybersecurity</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">1 student</span>
+                                        <span class="badge outline">ACT: 0</span>
+                                        <span class="badge outline">Sydney: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="Sydney">
+                                        <div class="student-info">
+                                            <div class="student-name">David Wilson</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">Sydney</span>
+                                            <span class="badge pending">pending</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card unit-card" data-unit="network administration">
+                            <div class="card-header">
+                                <div class="unit-header">
+                                    <h3 class="card-title">Network Administration</h3>
+                                    <div class="unit-badges">
+                                        <span class="badge secondary">1 student</span>
+                                        <span class="badge outline">ACT: 0</span>
+                                        <span class="badge outline">Sydney: 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="students-list">
+                                    <div class="student-item" data-location="Sydney">
+                                        <div class="student-info">
+                                            <div class="student-name">David Wilson</div>
+                                            <div class="student-id">CIHE23902</div>
+                                        </div>
+                                        <div class="student-badges">
+                                            <span class="badge location-badge">Sydney</span>
+                                            <span class="badge pending">pending</span>
                                         </div>
                                     </div>
                                 </div>
@@ -562,259 +745,65 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Generate Timetable Tab Content -->
-                <div class="tab-content" id="timetable">
-                    <div class="page-header">
-                        <h2 class="page-title">Generate Timetable</h2>
-                        <div class="page-actions">
-                            <button class="btn-outline">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12,6 12,12 16,14"/>
-                                </svg>
-                                Preview Schedule
-                            </button>
-                            <button class="btn-primary">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                                Generate Final Timetable
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Generation Settings -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Timetable Settings</h3>
-                            <p class="card-description">Configure how the timetable should be generated</p>
-                        </div>
+                <!-- No results message -->
+                    <div class="card no-results" id="no-results" style="display: none;">
                         <div class="card-content">
-                            <div class="settings-grid">
-                                <div class="setting-group">
-                                    <label class="setting-label">Priority</label>
-                                    <select class="setting-select">
-                                        <option value="student-availability">Student Availability</option>
-                                        <option value="room-efficiency">Room Efficiency</option>
-                                        <option value="instructor-preference">Instructor Preference</option>
-                                    </select>
-                                </div>
-                                <div class="setting-group">
-                                    <label class="setting-label">Minimum Students per Class</label>
-                                    <select class="setting-select">
-                                        <option value="2">2 Students</option>
-                                        <option value="3" selected>3 Students</option>
-                                        <option value="4">4 Students</option>
-                                    </select>
-                                </div>
-                                <div class="setting-group">
-                                    <label class="setting-label">Allow Split Classes</label>
-                                    <select class="setting-select">
-                                        <option value="yes" selected>Yes</option>
-                                        <option value="no">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Preview Timetable -->
-                    <!-- <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Proposed Timetable</h3>
-                            <p class="card-description">Generated based on student availability and preferences</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="timetable-grid">
-                                <div class="timetable-header">
-                                    <div class="timetable-cell header">Time</div>
-                                    <div class="timetable-cell header">Monday</div>
-                                    <div class="timetable-cell header">Tuesday</div>
-                                    <div class="timetable-cell header">Wednesday</div>
-                                    <div class="timetable-cell header">Thursday</div>
-                                    <div class="timetable-cell header">Friday</div>
-                                </div>
-                                <div class="timetable-row">
-                                    <div class="timetable-cell time">9:00 AM</div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot">
-                                        <div class="course-block green">
-                                            Programming Fundamentals<br>
-                                            4 students • Room 101
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timetable-row">
-                                    <div class="timetable-cell time">11:00 AM</div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot">
-                                        <div class="course-block blue">
-                                            Database Design<br>
-                                            4 students • Room 102
-                                        </div>
-                                    </div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                </div>
-                                <div class="timetable-row">
-                                    <div class="timetable-cell time">1:00 PM</div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot">
-                                        <div class="course-block purple">
-                                            AI Fundamentals<br>
-                                            4 students • Lab A
-                                        </div>
-                                    </div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                </div>
-                                <div class="timetable-row">
-                                    <div class="timetable-cell time">3:00 PM</div>
-                                    <div class="timetable-cell slot">
-                                        <div class="course-block orange">
-                                            Data Structures<br>
-                                            3 students • Room 103
-                                        </div>
-                                    </div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                    <div class="timetable-cell slot"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Proposed Timetable</h3>
-                            <p class="card-description">Generated based on student availability and preferences</p>
-                        </div>
-                        <div class="card-content">
-                            <table class="timetable-table">
-                                <thead>
-                                    <tr>
-                                        <th>Time</th>
-                                        <th>Monday</th>
-                                        <th>Tuesday</th>
-                                        <th>Wednesday</th>
-                                        <th>Thursday</th>
-                                        <th>Friday</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>9:00 AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <div class="course-block green">
-                                                Programming Fundamentals<br>
-                                                4 students • Room 101
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11:00 AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <div class="course-block blue">
-                                                Database Design<br>
-                                                4 students • Room 102
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1:00 PM</td>
-                                        <td></td>
-                                        <td>
-                                            <div class="course-block purple">
-                                                AI Fundamentals<br>
-                                                4 students • Lab A
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3:00 PM</td>
-                                        <td>
-                                            <div class="course-block orange">
-                                                Data Structures<br>
-                                                3 students • Room 103
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Generation Summary -->
-                    <div class="summary-grid">
-                        <div class="summary-card">
-                            <div class="summary-header">
-                                <h3 class="summary-title">Coverage Rate</h3>
-                            </div>
-                            <div class="summary-content">
-                                <div class="summary-number green">94%</div>
-                                <p class="summary-description">Students can attend chosen units</p>
-                            </div>
-                        </div>
-                        <div class="summary-card">
-                            <div class="summary-header">
-                                <h3 class="summary-title">Efficiency Score</h3>
-                            </div>
-                            <div class="summary-content">
-                                <div class="summary-number blue">87%</div>
-                                <p class="summary-description">Optimal use of time slots</p>
-                            </div>
-                        </div>
-                        <div class="summary-card">
-                            <div class="summary-header">
-                                <h3 class="summary-title">Conflicts</h3>
-                            </div>
-                            <div class="summary-content">
-                                <div class="summary-number orange">2</div>
-                                <p class="summary-description">Minor scheduling issues</p>
+                            <div style="text-align: center; padding: 2rem;">
+                                <p style="color: #64748b;">No units found matching your search criteria.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
     <script>
+       // Student data
+        const studentsData = [
+            {
+                id: 'ST2024001',
+                name: 'Alice Johnson',
+                location: 'ACT',
+                units: ['Programming Fundamentals', 'Database Design', 'Web Development'],
+                status: 'pending'
+            },
+            {
+                id: 'ST2024002',
+                name: 'Bob Smith',
+                location: 'Sydney',
+                units: ['Data Structures', 'Software Engineering', 'Programming Fundamentals'],
+                status: 'approved'
+            },
+            {
+                id: 'ST2024003',
+                name: 'Carol Davis',
+                location: 'ACT',
+                units: ['AI Fundamentals', 'Machine Learning', 'Database Design'],
+                status: 'pending'
+            },
+            {
+                id: 'ST2024004',
+                name: 'David Wilson',
+                location: 'Sydney',
+                units: ['Cybersecurity', 'Network Administration'],
+                status: 'pending'
+            },
+            {
+                id: 'ST2024005',
+                name: 'Emma Brown',
+                location: 'ACT',
+                units: ['Web Development', 'Software Engineering', 'AI Fundamentals'],
+                status: 'approved'
+            }
+        ];
+
         // Tab switching functionality
         function switchTab(tabId) {
-            // Remove active class from all tabs and content
             document.querySelectorAll('.tab-trigger').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             
-            // Add active class to clicked tab and corresponding content
             document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
             document.getElementById(tabId).classList.add('active');
         }
 
-        // Add event listeners for tab triggers
         document.querySelectorAll('.tab-trigger').forEach(tab => {
             tab.addEventListener('click', function() {
                 const tabId = this.getAttribute('data-tab');
@@ -822,16 +811,85 @@
             });
         });
 
-        // Search functionality
-        document.querySelector('.search-input')?.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const rows = document.querySelectorAll('.data-table tbody tr');
+        // Enhanced search functionality for enrollment tab
+        function filterEnrollmentTable() {
+            const searchTerm = document.getElementById('enrollment-search').value.toLowerCase();
+            const locationFilter = document.getElementById('location-filter').value;
+            const statusFilter = document.getElementById('status-filter').value;
+            const rows = document.querySelectorAll('#enrollment-table-body tr');
             
             rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(searchTerm) ? '' : 'none';
+                const studentText = row.getAttribute('data-student') || '';
+                const unitsText = row.getAttribute('data-units') || '';
+                const locationText = row.getAttribute('data-location') || '';
+                const statusText = row.getAttribute('data-status') || '';
+                
+                const matchesSearch = studentText.includes(searchTerm) || 
+                                    unitsText.includes(searchTerm) ||
+                                    row.textContent.toLowerCase().includes(searchTerm);
+                const matchesLocation = locationFilter === 'all' || locationText === locationFilter;
+                const matchesStatus = statusFilter === 'all' || statusText === statusFilter;
+                
+                row.style.display = (matchesSearch && matchesLocation && matchesStatus) ? '' : 'none';
             });
-        });
+        }
+
+        // Enhanced search functionality for units tab
+        function filterUnits() {
+            const searchTerm = document.getElementById('unit-search').value.toLowerCase();
+            const locationFilter = document.getElementById('units-location-filter').value;
+            const unitCards = document.querySelectorAll('.unit-card');
+            let visibleUnits = 0;
+            
+            unitCards.forEach(card => {
+                const unitName = card.getAttribute('data-unit') || '';
+                const matchesSearch = unitName.includes(searchTerm);
+                
+                // Filter students within each unit by location
+                const studentItems = card.querySelectorAll('.student-item');
+                let hasVisibleStudents = false;
+                let actCount = 0;
+                let sydneyCount = 0;
+                
+                studentItems.forEach(item => {
+                    const studentLocation = item.getAttribute('data-location') || '';
+                    const matchesLocation = locationFilter === 'all' || studentLocation === locationFilter;
+                    item.style.display = matchesLocation ? '' : 'none';
+                    if (matchesLocation) {
+                        hasVisibleStudents = true;
+                        if (studentLocation === 'ACT') actCount++;
+                        if (studentLocation === 'Sydney') sydneyCount++;
+                    }
+                });
+                
+                // Update unit badges to reflect filtered counts
+                const badges = card.querySelector('.unit-badges');
+                const totalStudents = actCount + sydneyCount;
+                
+                if (totalStudents > 0) {
+                    badges.innerHTML = `
+                        <span class="badge secondary">${totalStudents} student${totalStudents !== 1 ? 's' : ''}</span>
+                        <span class="badge act-badge">ACT: ${actCount}</span>
+                        <span class="badge sydney-badge">Sydney: ${sydneyCount}</span>
+                    `;
+                }
+                
+                const shouldShow = matchesSearch && hasVisibleStudents;
+                card.style.display = shouldShow ? '' : 'none';
+                if (shouldShow) visibleUnits++;
+            });
+            
+            // Show/hide no results message
+            const noResults = document.getElementById('no-results');
+            noResults.style.display = visibleUnits === 0 ? 'block' : 'none';
+        }
+
+        // Add event listeners for search and filter inputs
+        document.getElementById('enrollment-search')?.addEventListener('input', filterEnrollmentTable);
+        document.getElementById('location-filter')?.addEventListener('change', filterEnrollmentTable);
+        document.getElementById('status-filter')?.addEventListener('change', filterEnrollmentTable);
+        document.getElementById('unit-search')?.addEventListener('input', filterUnits);
+        document.getElementById('units-location-filter')?.addEventListener('change', filterUnits);
 
         // Select all checkbox functionality
         document.querySelector('thead .checkbox')?.addEventListener('change', function() {
@@ -839,6 +897,12 @@
             checkboxes.forEach(checkbox => {
                 checkbox.checked = this.checked;
             });
+        });
+
+        // Initialize filters
+        document.addEventListener('DOMContentLoaded', function() {
+            filterEnrollmentTable();
+            filterUnits();
         });
     </script>
 </body>
