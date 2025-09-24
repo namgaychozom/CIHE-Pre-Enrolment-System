@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SyncMaster</title>
+    <link rel="stylesheet" href="./css files/Global.css">
+    <link rel="stylesheet" href="./css files/RegisterPage.css">
+    <script src="./js/api.js"></script>
+</head>
+<body>
+    <div class="register-page">
+        <!-- Header (positioned absolute) -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="../Assets/Logo.svg" alt="CIHE Logo">
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="./HomePage.html">About</a>
+                <a class="nav-item" href="./LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
+            </nav>
+        </header>
+        <!-- Main Register Form Section -->
+        <section class="register-section">
+            <div class="register-container">
+                <div class="register-form">
+                    <div class="form-header">
+                        <h1>Register</h1>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="form-fields">
+                            <!-- User Type Selection -->
+                            <div class="field-group">
+                                <label>I am registering as a:</label>
+                                <div class="input-container">
+                                    <select id="userType" onchange="toggleStudentFields()">
+                                        <option value="STUDENT">Student</option>
+                                        <option value="ADMIN">Administrator</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label>Email</label>
+                                <div class="input-container">
+                                    <input type="email" id="email" placeholder="" required>
+                                    <div class="input-icon email-icon">
+                                        <img src="../Assets/mail-line.svg" alt="Email Icon">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label>Password</label>
+                                <div class="input-container">
+                                    <input type="password" id="password" placeholder="" required>
+                                    <div class="input-icon password-icon">
+                                        <img src="../Assets/password icon.svg" alt="Password Icon">
+                                    </div>
+                                </div>
+                                <small style="color: #666; font-size: 12px; margin-top: 4px;">
+                                    Must be 8+ characters with uppercase, lowercase, number, and special character
+                                </small>
+                            </div>
+
+                            <!-- Student-specific fields -->
+                            <div id="studentFields" class="student-fields">
+                                <div class="name-fields">
+                                    <div class="field-group">
+                                        <label>First Name</label>
+                                        <div class="input-container">
+                                            <input type="text" id="firstName" placeholder="" required>
+                                        </div>
+                                    </div>
+                                    <div class="field-group">
+                                        <label>Last Name</label>
+                                        <div class="input-container">
+                                            <input type="text" id="lastName" placeholder="" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Phone Number</label>
+                                    <div class="input-container">
+                                        <input type="tel" id="phone" placeholder="+61 XXX XXX XXX">
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Location</label>
+                                    <div class="input-container">
+                                        <select id="address" required>
+                                            <option value="">Select your location</option>
+                                            <option value="ACT">Australian Capital Territory (ACT)</option>
+                                            <option value="NSW">New South Wales (NSW)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Program</label>
+                                    <div class="input-container">
+                                        <select id="program" required>
+                                            <option value="">Select your program</option>
+                                            <option value="Bachelor of Information Technology">Bachelor of Information Technology</option>
+                                            <option value="Bachelor of Business">Bachelor of Business</option>
+                                            <option value="Master of Information Technology">Master of Information Technology</option>
+                                            <option value="Master of Business Administration">Master of Business Administration</option>
+                                            <option value="Diploma of Information Technology">Diploma of Information Technology</option>
+                                            <option value="Diploma of Business">Diploma of Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Year Level</label>
+                                    <div class="input-container">
+                                        <select id="yearLevel" required>
+                                            <option value="">Select year level</option>
+                                            <option value="1">Year 1</option>
+                                            <option value="2">Year 2</option>
+                                            <option value="3">Year 3</option>
+                                            <!-- <option value="4">Year 4</option> -->
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="field-group">
+                                    <label>Date of Birth</label>
+                                    <div class="input-container">
+                                        <input type="date" id="dateOfBirth">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="register-btn" id="registerBtn">Create an Account</button>
+                            <div class="form-links">
+                                <a href="./LoginPage.html">Already have an account? Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Divider Line -->
+        <div class="divider">
+            <img src="../Assets/Line 2.svg" alt="Divider Line">
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Essential Links</h4>
+                        <a href="#">Privacy Policy | Terms of Service</a>
+                        <a href="#">FAQ | Contact Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Information</h4>
+                        <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                        <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                        <p>Campus Address: <span class="address">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+                    <div class="footer-logo">
+                        <div class="footer-logo-image">
+                            <img src="../Assets/Logo.svg" alt="CIHE Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<script>
+  // Registration form submission
+  document.getElementById("registerBtn").addEventListener("click", async function(e) {
+    e.preventDefault();
+    
+    const userType = document.getElementById("userType").value;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    
+    // Basic validation for all users
+    if (!email || !password) {
+      alert("Please fill in email and password");
+      return;
+    }
+    
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long and contain uppercase, lowercase, number, and special character");
+      return;
+    }
+    
+    // Validate password complexity
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+      alert("Password must contain at least one uppercase letter, lowercase letter, number, and special character");
+      return;
+    }
+    
+    // Student-specific validation
+    if (userType === 'STUDENT') {
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const program = document.getElementById("program").value;
+      const yearLevel = document.getElementById("yearLevel").value;
+      
+      if (!firstName || !lastName || !program || !yearLevel) {
+        alert("Please fill in all required student information");
+        return;
+      }
+    }
+    
+    // Prepare basic registration data
+    const registrationData = {
+      email: email,
+      password: password,
+      role: userType
+    };
+    
+    // Add student-specific data if user is registering as student
+    if (userType === 'STUDENT') {
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const program = document.getElementById("program").value;
+      const yearLevel = document.getElementById("yearLevel").value;
+      const dateOfBirth = document.getElementById("dateOfBirth").value;
+      
+      // Add names to main registration data for students
+      registrationData.firstName = firstName;
+      registrationData.lastName = lastName;
+      
+      // Add student profile data
+      registrationData.profileData = {
+        firstName: firstName,
+        lastName: lastName,
+        emailAddress: email,
+        phone: phone,
+        address: address,
+        program: program,
+        yearLevel: parseInt(yearLevel),
+        dateOfBirth: dateOfBirth
+      };
+    } else {
+      // For staff and admin, we need basic name info - use email prefix as fallback
+      const emailPrefix = email.split('@')[0];
+      registrationData.firstName = emailPrefix;
+      registrationData.lastName = userType; // Will be "STAFF" or "ADMIN"
+    }
+    
+    try {
+      const registerBtn = document.getElementById("registerBtn");
+      registerBtn.disabled = true;
+      registerBtn.textContent = "Creating Account...";
+      
+      // Use the API_BASE_URL from api.js
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(registrationData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Account created successfully! Please login with your credentials.");
+        window.location.href = "./LoginPage.html";
+      } else {
+        alert(data.error || "Registration failed. Please try again.");
+      }
+    } catch (error) {
+      console.error('Registration error:', error);
+      alert("Connection error. Please check if the server is running.");
+    } finally {
+      const registerBtn = document.getElementById("registerBtn");
+      registerBtn.disabled = false;
+      registerBtn.textContent = "Create an Account";
+    }
+  });
+</script>
+    
+</body>
+</html>

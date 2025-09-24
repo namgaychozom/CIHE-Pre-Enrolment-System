@@ -1,0 +1,231 @@
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    position: relative;
+}
+
+/* Login Section */
+.login-section {
+    width: 100%;
+    height: 778px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 778px;
+    padding: 94px 190px 0;
+}
+
+.login-form {
+    width: 556px;
+    height: 563px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.form-header {
+    width: 100%;
+    height: 102px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 244px;
+}
+
+.form-header h1 {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.form-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.form-fields {
+    height: 222px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 60px;
+    gap: 47px;
+}
+
+.field-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field-group label {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    color: #000000;
+    height: 21px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 13px 22px;
+}
+
+.input-container input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    padding-right: 35px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 22px;
+    width: 22px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.password-icon {
+    width: 21px;
+    height: 22.505px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 64px;
+    width: 556px;
+    height: auto;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox {
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox svg {
+    width: 100%;
+    height: 100%;
+}
+
+.checkbox-container span {
+    font-size: 20px;
+    color: #000000;
+    line-height: 21px;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    width: 100%;
+}
+
+.login-btn {
+    background-color: #28406c;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    width: 276px;
+    height: 58px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-btn-text {
+    text-decoration: none;
+    color: #ffffff;
+}   
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 157px;
+    width: 100%;
+    height: 53px;
+}
+
+.form-links a {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -0.32px;
+    width: 199.5px;
+    text-align: center;
+    height: 21px;
+}
+
+.form-links a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}

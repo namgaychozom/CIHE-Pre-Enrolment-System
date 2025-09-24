@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SyncMaster</title>
+    <link rel="stylesheet" href="./css files/Global.css">
+    <link rel="stylesheet" href="./css files/LoginPage.css">
+</head>
+<body>
+    <div class="login-page">
+        <!-- Header (positioned absolute) -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="../Assets/Logo.svg" alt="CIHE Logo">
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav-item" href="./HomePage.html">Home</a>
+                <a class="nav-item" href="./HomePage.html">About</a>
+                <a class="nav-item" href="./LoginPage.html">Login</a>
+                <a class="nav-item" href="#footer">Reach out to us</a>
+            </nav>
+        </header>
+
+        <!-- Main Login Form Section -->
+        <section class="login-section">
+            <div class="login-container">
+                <div class="login-form">
+                    <div class="form-header">
+                        <h1>Login</h1>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="form-fields">
+                            <div class="field-group">
+                                <label>Username/Email</label>
+                                <div class="input-container">
+                                    <input type="text" id="username" placeholder="">
+                                    <div class="input-icon user-icon">
+                                        <img src="../Assets/user-line.svg" alt="User Icon">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label>Password</label>
+                                <div class="input-container">
+                                    <input type="password" id="password" placeholder="">
+                                    <div class="input-icon password-icon">
+                                        <img src="../Assets/password icon.svg" alt="Password Icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="remember-me">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="rememberMe">
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="login-btn" id="loginBtn">Login</button>
+                            <div class="form-links">
+                                <a href="./RegisterPage.html">Create an account</a>
+                                <a href="./ForgotPasswordPage.html">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Divider Line -->
+        <div class="divider">
+            <img src="../Assets/Line 2.svg" alt="Divider Line">
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Essential Links</h4>
+                        <a href="#">Privacy Policy | Terms of Service</a>
+                        <a href="#">FAQ | Contact Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Information</h4>
+                        <p>Support Email: <a href="mailto:info@cihe.edu.au">info@cihe.edu.au</a></p>
+                        <p>Helpdesk Phone: <a href="tel:0299550488">+61 0299550488</a></p>
+                        <p>Campus Address: <span class="address">116 Pacific Highway, North Sydney,<br>NSW, 2060, Australia</span></p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2018-2025 CROWN INSTITUTE OF HIGHER EDUCATION (CIHE)</p>
+                    <div class="footer-logo">
+                        <div class="footer-logo-image">
+                            <img src="../Assets/Logo.svg" alt="CIHE Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+    const API_BASE_URL = 'http://localhost:5001/api';
+    
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const rememberMeCheckbox = document.getElementById("rememberMe");
+    const loginBtn = document.getElementById("loginBtn");
+
+    // On page load, check localStorage
+    window.onload = function () {
+        if (localStorage.getItem("rememberMe") === "true") {
+            usernameInput.value = localStorage.getItem("username") || "";
+            passwordInput.value = localStorage.getItem("password") || "";
+            rememberMeCheckbox.checked = true;
+        }
+    };
+
+    // Handle login button click
+    loginBtn.addEventListener("click", async function (e) {
+        e.preventDefault();
+        
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        
+        if (!username || !password) {
+            alert("Please enter both username/email and password");
+            return;
+        }
+
+        try {
+            loginBtn.disabled = true;
+            loginBtn.textContent = "Logging in...";
+            
+            const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: username,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Store auth token
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user', JSON.stringify(data.user));
+                
+                if (rememberMeCheckbox.checked) {
+                    localStorage.setItem("username", username);
+                    localStorage.setItem("rememberMe", "true");
+                } else {
+                    localStorage.removeItem("username");
+                    localStorage.setItem("rememberMe", "false");
+                }
+
+                // Redirect based on user role
+                if (data.user.role === 'ADMIN') {
+                    window.location.href = "AdminDashboard/AdminDashboard.html";
+                } else {
+                    window.location.href = "StudentDashboard/StudentDashboard.html";
+                }
+            } else {
+                alert(data.error || "Login failed. Please check your credentials.");
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+            alert("Connection error. Please check if the server is running.");
+        } finally {
+            loginBtn.disabled = false;
+            loginBtn.textContent = "Login";
+        }
+    });
+</script>
+
+    
+</body>
+</html>

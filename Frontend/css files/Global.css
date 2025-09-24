@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+body {
+    background-color: #f2f2f3;
+    line-height: 1.5;
+    color: #000000;
+}
+.homepage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    position: relative;
+}
+/* Header Styles */
+.header {
+    position: absolute;
+    top: 5px;
+    left: 81px;
+    width: 1288px;
+    height: 109px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 39px;
+    gap: 58px;
+    z-index: 1000;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    height: 102px;
+    width: 359px;
+}
+.logo-image {
+    width: 158px;
+    height: 102px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 47px;
+    padding: 0 36px;
+    width: 630px;
+}
+.nav-item {
+    font-size: 16px;
+    color: #1c3563;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 200px; 
+    text-align: center; 
+    text-decoration: none;
+}
+.nav-item:hover {
+    font-weight: bold;
+    text-decoration: double;
+}
+/* Footer */
+.footer {
+    background-color: #f2f2f3;
+    width: 100%;
+}
+
+.footer-content {
+    padding: 30px 80px;
+    gap: 200px;
+    
+}
+.footer-links {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.32px;
+}
+
+.footer-column a {
+    font-size: 16px;
+    color: #0434be;
+    text-decoration: none;
+    letter-spacing: -0.32px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: -0.32px;
+}
+
+.footer-column .address {
+    color: #0434be;
+}
+
+.footer-bottom {
+    display: flex;
+    gap: 200px;
+    align-items: center;
+}
+
+.footer-bottom p {
+    flex: 1;
+    font-size: 16px;
+    color: #3b3a3a;
+    letter-spacing: -0.32px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    height: 102px;
+    width: 359px;
+}
+
+.footer-logo-image {
+    width: 158px;
+    height: 102px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+}
