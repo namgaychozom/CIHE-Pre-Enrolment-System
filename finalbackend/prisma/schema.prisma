@@ -1,0 +1,174 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      Role     @default(STUDENT)
+  isActive  Boolean  @default(true)
+  
+  createdAt DateTime  @default(now()) 
+  updatedAt DateTime  @updatedAt 
+  studentProfile StudentProfile?
+  passwordResets PasswordReset[]
+  notifications Notification[]
+  
+  @@map("users")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+// Student information
+model StudentProfile {
+  id               Int      @id @default(autoincrement())
+  userId           Int      @unique
+  studentId        String   @unique 
+  firstName        String
+  lastName         String
+  emailAddress     String?  
+  address          String
+  phone            String?
+  program          String
+  yearLevel        Int
+  dateOfBirth      DateTime?
+  
+  user             User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  enrollments      Enrollment[]
+  
+  @@map("student_profiles")
+}
+
+
+model TimeSlot {
+  id        Int      @id @default(autoincrement())
+  name      String   
+  startTime String 
+  endTime   String
+  
+  availabilities Availability[]
+  
+  @@map("time_slots")
+}
+
+model Day {
+  id       Int    @id @default(autoincrement())
+  name     String @unique 
+  shortName String @unique 
+  dayOrder Int    @unique 
+  
+  availability Availability[]
+  
+  @@map("days")
+}
+
+// Represents available time slots for each day (e.g., "Monday Morning", "Tuesday Afternoon")
+model Availability {
+  id         Int    @id @default(autoincrement())
+  timeSlotId Int
+  dayId      Int
+  
+  timeSlot   TimeSlot @relation(fields: [timeSlotId], references: [id])
+  day        Day @relation(fields: [dayId], references: [id])
+  enrollments   Enrollment[]
+  
+  @@unique([timeSlotId, dayId]) 
+  @@map("availability")
+}
+
+model Unit {
+  id          Int      @id @default(autoincrement())
+  unitCode    String   @unique // "CS101", "MATH201"
+  title       String
+  description String?
+  credits     Int
+  
+  enrollments   Enrollment[]
+  
+  @@map("units")
+}
+
+
+model Enrollment {
+  id               Int             @id @default(autoincrement())
+  studentProfileId Int
+  unitId           Int
+  semesterId       Int
+  enrolledAt       DateTime        @default(now())
+  
+  availabilities   Availability[] 
+
+  studentProfile   StudentProfile @relation(fields: [studentProfileId], references: [id])
+  unit             Unit @relation(fields: [unitId], references: [id])
+  semester         Semester @relation(fields: [semesterId], references: [id])
+  
+  @@unique([studentProfileId, unitId, semesterId]) // Prevent duplicate enrollments
+  @@map("enrollments")
+}
+
+model Semester {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique 
+  academicYear Int      // 2025, 2026
+  semesterNumber  Int
+  startDate   DateTime
+  endDate     DateTime
+  description String?  @db.Text
+  enrollmentStart DateTime? // <-- add this line
+  enrollmentEnd   DateTime?
+  enrollments Enrollment[]
+  
+  @@map("semesters")
+}
+
+model PasswordReset {
+  id        Int      @id @default(autoincrement())
+  userId    Int      
+  otp       String   @unique
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  
+  user      User     @relation(fields: [userId], references: [id])
+  
+  @@map("password_resets")
+}
+
+model Notification {
+  id          Int      @id @default(autoincrement())
+  title       String
+  message     String   @db.Text
+  type        NotificationType @default(GENERAL)
+  isActive    Boolean  @default(true)
+  createdBy   Int      
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  creator     User     @relation(fields: [createdBy], references: [id])
+  
+  @@map("notifications")
+}
+
+enum NotificationType {
+  GENERAL
+  URGENT
+  ACADEMIC
+  SYSTEM
+}
+
