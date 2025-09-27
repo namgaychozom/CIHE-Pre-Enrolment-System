@@ -19,13 +19,13 @@
                 </div>
             </div>
             <nav class="nav">
-                <button class="nav-item active" data-tab="dashboard">Dashboard</button>
-                <button class="nav-item" data-tab="units">Units</button>
-                <button class="nav-item" data-tab="notifications">
+                <button class="nav-item tab-button active" data-tab="dashboard">Dashboard</button>
+                <button class="nav-item tab-button" data-tab="units">Units</button>
+                <button class="nav-item tab-button" data-tab="notifications">
                     Notifications
                     <span id="notification-badge" class="notification-badge">3</span>
                 </button>
-                <button class="nav-item" data-tab="profile">Profile</button>
+                <button class="nav-item tab-button" data-tab="profile">Profile</button>
             </nav>
 
                     <div class="flex items-center space-x-4">
@@ -77,7 +77,7 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <h1 id="welcome-message">Welcome back!</h1>
-                            <p class="text-gray-600">Semester 1, 2025 Unit Selection</p>
+                            <!-- <p class="text-gray-600">Semester 1, 2025 Unit Selection</p> -->
                         </div>
                         <button id="start-enrollment-btn" class="btn btn-primary hidden sm:flex">
                             <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
@@ -146,10 +146,10 @@
                                     <i data-lucide="user" class="w-4 h-4 mr-2"></i>
                                     Update Profile
                                 </button>
-                                <button class="btn btn-outline w-full quick-action">
+                                <!-- <button class="btn btn-outline w-full quick-action">
                                     <i data-lucide="help-circle" class="w-4 h-4 mr-2"></i>
                                     Get Help
-                                </button>
+                                </button> -->
                             </div>
                         </div>
 
@@ -202,7 +202,7 @@
                 <div class="space-y-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h1>Available Units - Semester 1, 2025</h1>
+                            <!-- <h1>Available Units - Semester 1, 2025</h1> -->
                             <p class="text-gray-600 mt-1">Select units for your upcoming semester</p>
                         </div>
                         <button class="btn btn-primary" id="units-enrollment-btn">
@@ -292,10 +292,6 @@
                             <h1>Profile</h1>
                             <p class="text-gray-600 mt-1">Manage your personal information and account settings</p>
                         </div>
-                        <button class="btn btn-primary">
-                            <i data-lucide="edit" class="w-4 h-4 mr-2"></i>
-                            Edit Profile
-                        </button>
                     </div>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -370,27 +366,6 @@
                                             <label class="text-sm font-medium text-gray-500">Member Since</label>
                                             <p id="profile-join-date" class="mt-1">Loading...</p>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Academic Information -->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Academic Information</h3>
-                                </div>
-                                <div class="card-content space-y-4">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div>
-                                            <label class="text-sm font-medium text-gray-500">Program</label>
-                                            <p class="mt-1">Bachelor of Information Technology</p>
-                                        </div>
-                                        
-                                        <div>
-                                            <label class="text-sm font-medium text-gray-500">Enrollment Date</label>
-                                            <p class="mt-1">March 2024</p>
-                                        </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -643,7 +618,7 @@
                     <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
                 </button>
 
-                <button id="submit-form" class="btn btn-primary" style="display: none;" onclick="submitForm()">
+                <button id="submit-form" class="btn btn-primary" style="display: none;">
                     <span id="submit-text">Submit Enrollment</span>
                     <i data-lucide="check-circle-2" class="w-4 h-4 ml-1"></i>
                 </button>
@@ -702,6 +677,8 @@
         </div>
     </div>
 
-    <script src="./student-script.js"></script>
+   
+    <script src="student-script.js"></script>
 </body>
 </html>
+

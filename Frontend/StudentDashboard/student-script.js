@@ -204,7 +204,7 @@ async function loadUserData() {
             // Update welcome message
             const welcomeMessage = document.getElementById('welcome-message');
             if (welcomeMessage) {
-                welcomeMessage.textContent = `Welcome back, ${firstName}!`;
+                welcomeMessage.textContent = `Welcome back, ${firstName} ${lastName}!`;
             }
             
             // Load profile data from cached user
@@ -243,10 +243,10 @@ function loadProfileData(user) {
         const fullName = `${user.studentProfile.firstName || ''} ${user.studentProfile.lastName || ''}`.trim() || user.email?.split('@')[0] || 'Student';
         document.getElementById('profile-full-name').textContent = fullName;
         
-        document.getElementById('profile-student-id').textContent = user.studentProfile.studentId || 'N/A';
+        document.getElementById('profile-student-id').textContent = user.studentProfile.studentId || user.id || 'N/A';
         document.getElementById('profile-email').innerHTML = `
             <i data-lucide="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
-            ${user.email || 'Not provided'}
+            ${user.studentProfile.emailAddress || 'Not provided'}
         `;
         
         // Phone number - check if available
@@ -254,7 +254,7 @@ function loadProfileData(user) {
         if (user.studentProfile.phone) {
             phoneElement.innerHTML = `
                 <i data-lucide="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
-                ${user.phone}
+                ${user.studentProfile.phone}
             `;
         } else {
             phoneElement.innerHTML = `
@@ -270,8 +270,8 @@ function loadProfileData(user) {
         `;
         
         // Join date
-        // const joinDate = user.createdAt ? new Date(user.createdAt).toLocaleDateString() : 'Unknown';
-        // document.getElementById('profile-join-date').textContent = joinDate;
+        const joinDate = user.createdAt ? new Date(user.createdAt).toLocaleDateString() : 'Unknown';
+        document.getElementById('profile-join-date').textContent = joinDate;
         
         // Update profile overview section
         updateProfileOverview(user);
@@ -298,7 +298,7 @@ function updateProfileOverview(user) {
         // Update profile overview student ID
         const profileOverviewStudentIdEl = document.getElementById('profile-overview-student-id');
         if (profileOverviewStudentIdEl) {
-            profileOverviewStudentIdEl.textContent = `Student ID: ${user.studentProfile.studentId || user.id || 'N/A'}`;
+            profileOverviewStudentIdEl.textContent = `Student ID: ${user.studentProfile.studentId ||  'N/A'}`;
         }
         
         // Update profile overview year
@@ -451,7 +451,9 @@ async function loadUnitsFromAPI() {
 async function getMostEnrolledUnits() {
     try {
         const response = await enrollmentAPI.getEnrollments();
-        const enrollmentsData = response.data || response;
+        const enrollmentsData = response.data.enrollments || response;
+
+        console.log('Raw enrollments data for stats:', enrollmentsData);
         
         if (!Array.isArray(enrollmentsData)) {
             console.error('Enrollments data is not an array:', enrollmentsData);
@@ -1239,16 +1241,11 @@ function createUnitCard(course, isDetailed = false) {
             <div class="card-header">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-3">
-                        <input type="checkbox" 
-                               ${isSelected ? 'checked' : ''} 
-                               ${isEnrolled ? 'disabled' : ''} 
-                               onchange="toggleCourse('${course.id}')"
-                               class="checkbox checkbox-primary">
+                        
                         <div>
                             <h3 class="card-title flex items-center gap-2">
                                 ${unitCode}
                                 ${course.suggested ? '<span class="badge badge-secondary">Suggested</span>' : ''}
-                                ${lowSeats ? '<span class="badge badge-warning">Few Seats Left</span>' : ''}
                                 ${isSelected ? '<span class="badge badge-success">Selected</span>' : ''}
                                 ${isEnrolled ? '<span class="badge badge-error">Already Enrolled</span>' : ''}
                             </h3>

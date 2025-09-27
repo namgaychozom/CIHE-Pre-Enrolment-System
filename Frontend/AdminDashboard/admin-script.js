@@ -312,7 +312,6 @@ function setupUnitEventListeners() {
                 unitsSearchInput.value = '';
                 this.style.display = 'none';
                 filterUnits();
-                console.log('Units search cleared');
             }
         });
     }

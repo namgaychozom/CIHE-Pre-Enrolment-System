@@ -58,7 +58,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-number" id="total-users">Loading...</div>
-                            <p class="stat-description">This semester</p>
+                            <!-- <p class="stat-description">This semester</p> -->
                         </div>
                     </div>
 
@@ -74,13 +74,13 @@
                         </div>
                         <div class="stat-content">
                             <div class="stat-number" id="total-units">Loading...</div>
-                            <p class="stat-description">This semester</p>
+                            <!-- <p class="stat-description">This semester</p> -->
                         </div>
                     </div>
 
                     <div class="stat-card">
                         <div class="stat-header">
-                            <h3 class="stat-title">Total Enrollments</h3>
+                            <h3 class="stat-title">Total Units Enrolled</h3>
                             <svg class="stat-icon orange" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                                 <circle cx="9" cy="7" r="4"/>
@@ -111,8 +111,8 @@
                             </button>
                         </div>
                     </div>
-<!-- 
-                    <div class="card">
+
+                    <!-- <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Unit Enrollment Overview</h3>
                             <p class="card-description">Students enrolled in each unit</p>
@@ -185,10 +185,11 @@
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th><input type="checkbox" class="checkbox"></th>
-                                    <th>Student</th>
+                                    <th>StudentID</th>
+                                    <th>Student Name</th>
                                     <th>Units Selected</th>
                                     <th>Semester</th>
+                                    <th>Location</th>
                                     <th>Availability</th>
                                     <th>Submitted</th>
                                     <th>Actions</th>
@@ -354,7 +355,7 @@
                     <div class="form-group">
                         <label for="semester-name">Semester Name *</label>
                         <input type="text" id="semester-name" name="name" required 
-                               placeholder="e.g., Semester 1- 2026, ">
+                               placeholder="e.g., Semester 1, 2026">
                     </div>
                     
                     <div class="form-row">
@@ -422,7 +423,7 @@
                     <div class="form-group">
                         <label for="unit-code">Unit Code *</label>
                         <input type="text" id="unit-code" name="unitCode" required 
-                               placeholder="e.g., CS101, MATH201">
+                               placeholder="e.g., ICT101, ICT201">
                     </div>
                     
                     <div class="form-group">
@@ -434,7 +435,7 @@
                     <div class="form-group">
                         <label for="unit-credits">Credits *</label>
                         <input type="number" id="unit-credits" name="credits" required 
-                               min="1" max="20" placeholder="e.g., 3">
+                               min="1" max="20" placeholder="e.g., 10">
                     </div>
                     
                     <div class="form-group">
@@ -454,7 +455,12 @@
         </div>
     </div>
 
-    <!-- Admin Dashboard Script -->
-    <script src="./admin-script.js"></script>
+    <!-- Modular Admin Dashboard Scripts -->
+    <script src="./js/globals.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/units.js"></script>
+    <script src="./js/semester.js"></script>
+    <script src="./js/student-enrollment.js"></script>
+    <script src="./js/notification.js"></script>
 </body>
 </html>

@@ -206,7 +206,14 @@ const enrollmentAPI = {
     
     deleteMyEnrollment: (id) =>
         apiCall(`/enrollments/my-enrollments/${id}`, { method: 'DELETE' }),
-    
+
+    // Submit enrollment (alias for createMyEnrollment)
+    submitEnrollment: (enrollmentData) =>
+        apiCall('/enrollments/my-enrollments', {
+            method: 'POST',
+            body: JSON.stringify(enrollmentData)
+        }),
+
     // Admin endpoints (for backwards compatibility)
     getEnrollments: () =>
         apiCall('/enrollments'),
@@ -343,6 +350,32 @@ const daysAPI = {
         apiCall(`/days/${id}`, { method: 'DELETE' })
 };
 
+const semestersAPI = {
+    getSemesters: () =>
+        apiCall('/semesters'),
+
+    getActiveSemesters: () =>
+        apiCall('/semesters/active'),
+
+    getSemester: (id) =>
+        apiCall(`/semesters/${id}`),
+
+    createSemester: (semesterData) =>
+        apiCall('/semesters', {
+            method: 'POST',
+            body: JSON.stringify(semesterData)
+        }),
+
+    updateSemester: (id, semesterData) =>
+        apiCall(`/semesters/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(semesterData)
+        }),
+
+    deleteSemester: (id) =>
+        apiCall(`/semesters/${id}`, { method: 'DELETE' })
+};
+
 // Protection for authenticated pages
 function requireAuth() {
     if (!isAuthenticated()) {
@@ -368,6 +401,7 @@ if (typeof module !== 'undefined' && module.exports) {
         notificationsAPI,
         timeslotsAPI,
         daysAPI,
+        semestersAPI,
         getAuthToken,
         getCurrentUser,
         isAuthenticated,
@@ -384,6 +418,7 @@ if (typeof module !== 'undefined' && module.exports) {
     window.notificationsAPI = notificationsAPI;
     window.timeslotsAPI = timeslotsAPI;
     window.daysAPI = daysAPI;
+    window.semestersAPI = semestersAPI;
     window.getAuthToken = getAuthToken;
     window.getCurrentUser = getCurrentUser;
     window.isAuthenticated = isAuthenticated;

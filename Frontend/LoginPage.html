@@ -171,11 +171,11 @@
                     window.location.href = "StudentDashboard/StudentDashboard.html";
                 }
             } else {
-                alert(data.error || "Login failed. Please check your credentials.");
+                alert("Login failed. Please check your credentials.");
             }
         } catch (error) {
             console.error('Login error:', error);
-            alert("Connection error. Please check if the server is running.");
+            alert("Login failed. Please check your credentials.");
         } finally {
             loginBtn.disabled = false;
             loginBtn.textContent = "Login";
